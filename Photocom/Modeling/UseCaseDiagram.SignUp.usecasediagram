@@ -1,0 +1,261 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="c954d38f-bd21-4c67-9d5c-fad37c85dec0" name="UseCaseDiagram.SignUp" linkedPackageId="a5e5e2a3-68b6-4bd9-ab6d-e382e73a325b" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <profileInstances>
+    <packageHasProfileInstances Id="92b7867c-0ed2-4a42-9ffc-817421e4c17f">
+      <profileInstance Id="c1897a5c-b4e3-4761-bdda-9ba4141bbb0e" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="94878d11-5f26-4cc1-a577-bbb4a57c97e8">
+      <profileInstance Id="634a180b-fdce-492e-8eea-350f38b2b3bb" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="8b11c322-0e0b-4b18-8748-51a70755b8bd" name="User" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="11b86ee0-779a-441d-acee-93eb27913731" />
+        <targetEnds>
+          <association Id="e7e28079-6bbf-4884-acf8-f33d00209a45" isDerived="false" sourceEndRoleName="User" targetEndRoleName="Load avatar" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="d693f12f-3543-40ee-ab68-e7de56efa061" LastKnownName="Load avatar" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="61a11ae5-250d-4085-af0b-c370de5c6166" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="f4b3b299-085a-40bf-8275-c014ce05c4dd" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="dfd5b4f7-887e-4a9c-a89b-0b01163b1fb6" name="Load avatar" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="8fe8223d-0f6c-4c79-bb59-9213b461b158" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="5bd0b476-8725-415e-b099-3bcb6ffbcab3" />
+          </association>
+          <association Id="491dcf6c-a72b-40a3-a5e5-16af3254357b" isDerived="false" sourceEndRoleName="User" targetEndRoleName="Enter personal info" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="fa637f70-aaf5-46b2-9a1f-5d880316a6f4" LastKnownName="Enter personal info" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b1e2401d-61e5-4d95-a5ab-0eb043d1848f" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="4de1f4a2-bfa2-4edc-b196-730d0f04a825" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="cd5249e3-9e16-465f-a98d-c02f95969937" name="Enter personal info" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="928ccee1-aa15-41ae-8e75-7ed58f330264" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="946d7551-6d36-4084-8ad2-abf9034ac0fd" />
+          </association>
+          <association Id="e6f41afc-6981-4c66-bde1-8912418c41cf" isDerived="false" sourceEndRoleName="User" targetEndRoleName="Confirm signing up" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="4a148369-36c0-42a9-a194-15d1d12d4627" LastKnownName="Visit confirmation link" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ecacb20c-2fa9-4107-b533-d3495b44b484" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="f9219cc7-f9b8-4c5d-8dfe-c8a772c151d6" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="9324c81f-fb16-4508-8154-200c6de50d0e" name="Confirm signing up" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="9094cb22-51fc-45e9-8838-6c482b3fd1b1" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="7da2b0a6-cda2-4cdb-b98b-659243177f9c" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="d693f12f-3543-40ee-ab68-e7de56efa061" name="Load avatar" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="2ee71a11-bec0-4795-820d-0f660edea51d" />
+        <subjects>
+          <subsystemMoniker Id="432eb28d-0b15-40cc-872b-408b5a8cba4e" LastKnownName="Sign-up" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="fa637f70-aaf5-46b2-9a1f-5d880316a6f4" name="Enter personal info" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="0a06a03c-2c2b-4c8f-a52a-c3766ae5fbd6" />
+        <additions>
+          <include Id="2bad3f96-1a5a-4459-bd73-5696221c72e9">
+            <useCaseMoniker Id="5f5d2371-16bc-4d81-9154-5eae9301c88f" LastKnownName="First name" />
+            <elementDefinition Id="59c5062e-dbc6-4fde-8f1c-6d5c152c30b3" />
+          </include>
+          <include Id="6e66e378-3bf3-4a30-a7aa-8f82fc5be37c">
+            <useCaseMoniker Id="7875b863-0c07-46c8-85fc-ae95cd9fdfda" LastKnownName="Last name" />
+            <elementDefinition Id="8749f722-5d68-45b5-9a08-c2304d815c32" />
+          </include>
+          <include Id="4654e0b8-2465-4adc-9986-fc2f94421e94">
+            <useCaseMoniker Id="772557f6-1ea2-4b18-becb-4316cbc4e086" LastKnownName="Email" />
+            <elementDefinition Id="bcc8487b-b8be-41eb-8d0d-bc8c33a8df1e" />
+          </include>
+          <include Id="bf844875-e220-49c2-893c-95c60e7851f2">
+            <useCaseMoniker Id="ffbc0540-3f60-4014-89dd-0953d6763694" LastKnownName="About yourself" />
+            <elementDefinition Id="a804e5ca-c5af-421a-8c07-91d488b532f4" />
+          </include>
+          <include Id="27836d01-ba0d-4f66-97be-dbb451c212c6">
+            <useCaseMoniker Id="2e096777-92ed-4cd1-8ca3-6ec99bae5749" LastKnownName="Password" />
+            <elementDefinition Id="73cae76b-6759-4a02-bf9d-6b4ec9b4957c" />
+          </include>
+          <include Id="70ea2372-3dd8-4006-b37f-348d787759db">
+            <useCaseMoniker Id="69254564-21f8-4ed7-864c-c1afb54be064" LastKnownName="Confirm password" />
+            <elementDefinition Id="5f5c4471-13b7-4353-93b4-9245fd7b609d" />
+          </include>
+          <include Id="c6c5100d-e5f7-467d-8291-f4bb4b0024c5">
+            <useCaseMoniker Id="665f68f8-1f6a-4e27-8172-b9bb5876e3c6" LastKnownName="Login" />
+            <elementDefinition Id="38aa9b6b-de2d-4a6a-8cd3-29938c449c09" />
+          </include>
+        </additions>
+        <subjects>
+          <subsystemMoniker Id="432eb28d-0b15-40cc-872b-408b5a8cba4e" LastKnownName="Sign-up" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="5f5d2371-16bc-4d81-9154-5eae9301c88f" name="First name" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="97d24d43-9754-4e9b-b178-6b4c88546cf7" />
+        <subjects>
+          <subsystemMoniker Id="432eb28d-0b15-40cc-872b-408b5a8cba4e" LastKnownName="Sign-up" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="7875b863-0c07-46c8-85fc-ae95cd9fdfda" name="Last name" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="62affe57-a3bc-44c8-8ab7-ea1aa812ff30" />
+        <subjects>
+          <subsystemMoniker Id="432eb28d-0b15-40cc-872b-408b5a8cba4e" LastKnownName="Sign-up" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="772557f6-1ea2-4b18-becb-4316cbc4e086" name="Email" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="fa624776-4bbc-4e78-af93-62cb603c46f3" />
+        <subjects>
+          <subsystemMoniker Id="432eb28d-0b15-40cc-872b-408b5a8cba4e" LastKnownName="Sign-up" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="ffbc0540-3f60-4014-89dd-0953d6763694" name="About yourself" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="758083e4-47a0-4a3a-868d-8a594e03a904" />
+        <subjects>
+          <subsystemMoniker Id="432eb28d-0b15-40cc-872b-408b5a8cba4e" LastKnownName="Sign-up" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="2e096777-92ed-4cd1-8ca3-6ec99bae5749" name="Password" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="cb1f03fa-e344-4d1e-9022-e8e6d1c7f024" />
+        <subjects>
+          <subsystemMoniker Id="432eb28d-0b15-40cc-872b-408b5a8cba4e" LastKnownName="Sign-up" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="69254564-21f8-4ed7-864c-c1afb54be064" name="Confirm password" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="ebaaea65-d2fe-4652-8580-9a373761009e" />
+        <subjects>
+          <subsystemMoniker Id="432eb28d-0b15-40cc-872b-408b5a8cba4e" LastKnownName="Sign-up" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="4a148369-36c0-42a9-a194-15d1d12d4627" name="Visit confirmation link" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="eec39081-4254-45e6-bfa9-0efd908e28ff" />
+        <subjects>
+          <subsystemMoniker Id="432eb28d-0b15-40cc-872b-408b5a8cba4e" LastKnownName="Sign-up" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="ee8b7816-7a15-4c5c-a6af-9cca12809a24" name="Web-server" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="9f05e7e8-225e-4242-a157-928509536bec" />
+        <targetEnds>
+          <association Id="76ca59f6-5009-4ea6-a52c-4ad873f9369e" isDerived="false" sourceEndRoleName="Web-server" targetEndRoleName="Add account" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="3fb8728f-5b97-49c2-bdb3-3420af12ee25" LastKnownName="Add account" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="bb9a7610-9d14-4c38-ac95-4a1ab5859309" name="Web-server" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="b843fe0d-b7f1-4eb2-9560-8ea55f85f0ee" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a9c45e73-0d44-4204-a719-9cc60a765bf4" name="Add account" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="f6fd4107-8b1b-4833-b096-27d23c6a38f6" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="1a70f2f2-e02c-4ae8-a56f-1bd4268f7e91" />
+          </association>
+          <association Id="7f8508bc-691f-462f-8a8f-c5c67b7f9616" isDerived="false" sourceEndRoleName="Web-server" targetEndRoleName="Send confirmation link" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="f05a28e2-16fd-48e4-8da1-fe2066b14d5b" LastKnownName="Send confirmation link" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="91347904-9817-48e0-9f9e-cdb7f7770153" name="Web-server" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="f5e0d609-8fed-48df-97e3-5a67d2745c08" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="92d0f753-3321-4826-9c43-314367e9e735" name="Send confirmation link" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="cb0541a4-7337-4776-a965-5bd45127affc" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="18a356e7-6108-4e22-8ad9-a9c9bb63d535" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="f05a28e2-16fd-48e4-8da1-fe2066b14d5b" name="Send confirmation link" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="46736b2e-5523-4dd3-b4bb-bc7a39f8e268" />
+        <extendedCases>
+          <extend Id="bccea92f-c272-47da-9512-b6f626ba661f">
+            <useCaseMoniker Id="4a750f13-e36a-421e-b597-47a5ddd55705" LastKnownName="Activate account" />
+            <elementDefinition Id="c89917f1-c028-408f-92c0-47095adaadb8" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker Id="432eb28d-0b15-40cc-872b-408b5a8cba4e" LastKnownName="Sign-up" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="3fb8728f-5b97-49c2-bdb3-3420af12ee25" name="Add account" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="9b0a9836-8850-4876-9724-a0f61c9a0e9f" />
+        <subjects>
+          <subsystemMoniker Id="432eb28d-0b15-40cc-872b-408b5a8cba4e" LastKnownName="Sign-up" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="4a750f13-e36a-421e-b597-47a5ddd55705" name="Activate account" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="f234d973-9247-4c7d-8fd1-f6f747d79bd8" />
+        <subjects>
+          <subsystemMoniker Id="432eb28d-0b15-40cc-872b-408b5a8cba4e" LastKnownName="Sign-up" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="665f68f8-1f6a-4e27-8172-b9bb5876e3c6" name="Login" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="e1c95d7d-6bfe-4044-bfb0-dcd07606786a" />
+        <subjects>
+          <subsystemMoniker Id="432eb28d-0b15-40cc-872b-408b5a8cba4e" LastKnownName="Sign-up" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="432eb28d-0b15-40cc-872b-408b5a8cba4e" name="Sign-up" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="768b292d-cbeb-4c28-96bb-893bd2fbe393" />
+      </subsystem>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="a5e5e2a3-68b6-4bd9-ab6d-e382e73a325b" name="Modeling">
+    <elementDefinition Id="afd4c78b-d222-4aae-a138-6ec3f60f6f2b" />
+  </package>
+</useCaseModelRoot>

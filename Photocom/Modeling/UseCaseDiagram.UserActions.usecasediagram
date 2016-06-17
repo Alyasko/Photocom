@@ -1,0 +1,575 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="cf789ef1-cba8-4650-8ba3-d3bf46de338a" name="UseCaseDiagram" linkedPackageId="22f30cf5-3329-4c86-8d7d-600d1698a98c" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <profileInstances>
+    <packageHasProfileInstances Id="9556abe0-53a3-4ec5-a888-efe431819d74">
+      <profileInstance Id="c901fa86-5354-45cd-8f00-0306098a5bc6" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="94f697c1-ec22-4dc5-a6f4-b1e5f38c4d51">
+      <profileInstance Id="e3b7b6c0-d433-4f67-9c1c-ed288905f072" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="f27a5282-ee04-48f0-97ee-192508d49d68" name="Guest" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="5465334c-7cf3-40b3-a0ae-7f331e5f1be6" />
+        <targetEnds>
+          <association Id="553995da-a8d9-4cff-a0cd-342a7da03f91" isDerived="false" sourceEndRoleName="Guest" targetEndRoleName="View all photos" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="c7d12baf-804e-4089-8242-46ed9d44f254" LastKnownName="View all photos" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7c6d68e6-d6ef-4322-b1bd-6ab239e8eca1" name="Guest" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="5434612a-e500-45b6-bda9-495adc848041" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="4a76deb4-bf44-4d8e-8b16-6da52194d4f3" name="View all photos" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="6b07b365-718b-4b97-af1c-9b21b16d70c2" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="a6026fea-2752-4020-a047-488904281bd7" />
+          </association>
+          <association Id="9425a6f6-6e7d-4419-8e07-c17bef984686" isDerived="false" sourceEndRoleName="Guest" targetEndRoleName="Sign up" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="54fe4bcd-903d-40d6-a762-b5355227985f" LastKnownName="Sign-up" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="33f35f82-b819-4c7d-ada2-f762ccb61dee" name="Guest" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="5200b883-63fe-4773-9c6f-6c76094ed0c7" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="5655eb4a-a609-403a-b970-70cacf94323a" name="Sign up" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="df6b8223-e73a-4ca7-a630-ff6ace7053e9" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="aef4caef-4393-41a4-9b47-e62e0ad42d74" />
+          </association>
+          <association Id="d4edc1c2-207b-4259-846c-e6624527d38a" isDerived="false" sourceEndRoleName="Guest" targetEndRoleName="Sign in" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="65c7aaca-a1da-4102-9de1-5645e177afa2" LastKnownName="Sign-in" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="38b84a98-fd2e-414b-b87c-a139dc59fa50" name="Guest" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="2cf626a2-cc44-46b7-afce-25733c2b09bc" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="2493cb28-561f-44cc-bc41-1121cd33aaf9" name="Sign in" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="71c67d66-3d99-43b0-ae56-a9c9708c5193" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="ba5010b8-f831-4728-9464-4d9931e7d0e8" />
+          </association>
+          <association Id="a61f49ca-9cca-4b45-af3c-246d6bf1e513" isDerived="false" sourceEndRoleName="Guest" targetEndRoleName="Change language" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="2b5f94ba-eb6a-4f18-8877-bcdbbf29c11f" LastKnownName="Change language" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="fe1b8f4e-3f47-4b9b-82b8-57b87423686d" name="Guest" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="b0d37df9-c5ca-4d05-bb81-da27def41c4b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="137444f0-c484-4fca-bdf4-b49388674d81" name="Change language" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="8bed6e07-5217-485c-898c-df9d85c99563" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="abdae169-525b-4ef2-9de5-23c9f6c003c5" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="01015825-7109-4d8b-acdd-1545ef69dd3e" name="User" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="36e7b30d-03b8-4cf2-a346-b055d4f7c4c4" />
+        <generalsInternal>
+          <generalization Id="219bc826-e93b-4c88-b255-5b82a6b76d25" isSubstitutable="false">
+            <actorMoniker Id="f27a5282-ee04-48f0-97ee-192508d49d68" LastKnownName="Guest" />
+            <elementDefinition Id="ee848f27-523f-4ecc-b3b4-2ddfff3e4263" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association Id="d0ab9f9f-562f-4e9e-8120-1f23a824d62b" isDerived="false" sourceEndRoleName="User" targetEndRoleName="View own profile" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="bfe94d6e-f78f-4cfc-9d0b-b6173abd1156" LastKnownName="View own profile" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="4bb56c2c-1c29-4aaa-af77-b12718b55bd7" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="a8955ec2-fcd3-4b57-a4fb-234d1133664a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ceaa949b-4191-4e94-bd70-0843f9cd30f3" name="View own profile" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="ee8402b4-f1c9-4cb4-a878-6cf49b94d83c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="8e5bb05e-b46b-4421-937b-fac46ea9e0a2" />
+          </association>
+          <association Id="846767e3-a5ee-40a9-aceb-35a073cd5571" isDerived="false" sourceEndRoleName="User" targetEndRoleName="Edit own profile" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="e67b67ee-28a4-4c98-b706-bf46ca295875" LastKnownName="Edit own profile" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b945d0b8-89f5-4790-9972-b2873945c2f7" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="d70a9ea0-540e-435b-9706-b4c7a0c61bdd" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="9a7838f1-7641-4546-8170-bde77e991aa1" name="Edit own profile" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="ae0ad960-5d06-4f96-9640-aa801b3a6544" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="e7e7c57f-508d-42f9-af1b-4d76833ce353" />
+          </association>
+          <association Id="8938f297-0843-4716-baeb-c8d3f1a25b69" isDerived="false" sourceEndRoleName="User" targetEndRoleName="Load photo" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="78621082-7e07-4920-a898-72910b8dcd37" LastKnownName="Load photo" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7217ff76-58dd-4b83-bd52-0267ca13df9c" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="dcb52b94-e7ab-4591-9864-e154349e61de" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="8d961004-22d1-478c-99f3-5c52b38489b7" name="Load photo" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="8546b0c9-6d12-4680-815e-7aae5ed87459" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="0d3f7790-13d5-46de-8a25-206eca7c493b" />
+          </association>
+          <association Id="223d4883-6d61-44aa-840e-3b937395e3da" isDerived="false" sourceEndRoleName="User" targetEndRoleName="Like photo" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="c841ca64-3492-4588-af58-200bba48f4ea" LastKnownName="Like photo" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="4665e112-a3b7-4c35-9bbe-82b120fd9b57" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="6dc2eaad-4089-4c16-9e84-126e81ae4117" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7344ce81-3051-4fbb-9894-82c68325c6a2" name="Like photo" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="8b6f3e98-00a2-4f69-a172-4eb02b5b4106" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="80ed3e55-c884-4417-95b4-2f07d403367c" />
+          </association>
+          <association Id="24008a1e-fe3e-46b7-b2ee-f334ff4f1cdf" isDerived="false" sourceEndRoleName="User" targetEndRoleName="Dislike photo" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="5c7b4d4c-6f71-4d5a-a940-7319959c8cb4" LastKnownName="Dislike photo" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f701a6cc-d5b5-4457-a077-93e4b9946469" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="4dff125c-8d1c-4d73-8f98-d70d10bb130b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="8e1537e5-1616-4661-af40-e1f06f962ad5" name="Dislike photo" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="7ff66be5-73ec-4e0f-a5d1-a381dd7e1b5a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="13dc1e55-700c-4d3d-851a-363cc8f09733" />
+          </association>
+          <association Id="f8b0f0df-3164-4455-b265-95e10d57ef39" isDerived="false" sourceEndRoleName="User" targetEndRoleName="Add comment" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="a5a29e75-9412-4bfa-8091-4755f70727e5" LastKnownName="Add comment" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="af03e344-45a5-4640-a607-e40621b20842" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="7d020fe5-b175-4cb9-a3f4-bb60a35defe3" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="90acf74d-2a55-490d-829c-5aeaca8e15bf" name="Add comment" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="d72e481e-0254-4f97-a148-22515f60a4fa" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="7927b854-598d-44d4-b9de-d102e710fee5" />
+          </association>
+          <association Id="b96767cf-25d5-4886-907d-67661058dee8" isDerived="false" sourceEndRoleName="User" targetEndRoleName="Remove comment" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="4bfc7ec5-3950-41c7-9a4e-874a959c58a0" LastKnownName="Remove own comment" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="df7d7414-5878-49c4-935b-6c3702401bf2" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="c5c39c95-21e1-48d7-b014-eddc712351c0" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="460d630f-dad8-4dbc-b27d-0ac3fdd418b9" name="Remove comment" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="5f9b06cb-6c11-47b8-bedf-058c55ce313c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="4a957042-7136-484c-a29c-e031d08304af" />
+          </association>
+          <association Id="0b1f384f-ed20-40ff-9e42-78758b02b988" isDerived="false" sourceEndRoleName="User" targetEndRoleName="Edit photo" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="2b5885b2-eaa4-44a1-bf99-5a87cf857aab" LastKnownName="Edit own photo" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7c1c60c7-6b17-4bcc-8ece-6b2ecbc94866" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="e894e378-f199-49b1-a249-b5aaf0dfdbc4" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="dc76da31-1ffa-4927-b7bb-274a50284af4" name="Edit photo" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="3909d44a-5ecb-48e6-ba5a-0a9444fba8ac" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="8e1f326e-d57f-4825-a01b-8aced39f36ec" />
+          </association>
+          <association Id="f6bac984-9b44-4333-9ef7-a3de9ec59cbe" isDerived="false" sourceEndRoleName="User" targetEndRoleName="Delete photo" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="ebfdae06-1da5-443b-af34-37afe2b0ae01" LastKnownName="Delete own photo" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="21c26449-c77d-47f2-aa46-f86431c4fc88" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="1e49b313-1524-4b00-a736-074ecef30937" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d27d5354-d239-458f-ae6c-875b4e05b605" name="Delete photo" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="c600f003-9414-4b0a-b342-49d3998cac30" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="42e8d16e-ee4d-4c2e-9f5a-3ba1a50a2bff" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="cd812b83-8776-4a49-b266-e02cf15a8f76" name="Admin" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="b7f61138-d0f8-4603-8e77-3c6d49298cce" />
+        <generalsInternal>
+          <generalization Id="e3541f36-b040-4026-8ca5-ac26cb97b5e1" isSubstitutable="false">
+            <actorMoniker Id="01015825-7109-4d8b-acdd-1545ef69dd3e" LastKnownName="User" />
+            <elementDefinition Id="f5e7b80b-245f-4019-91db-519cd4500df6" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association Id="f251233f-5c7e-4c90-9def-984b6107b92d" isDerived="false" sourceEndRoleName="Admin" targetEndRoleName="Edit all profiles" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="accb7fc2-786e-464f-946f-a59ec0b683a8" LastKnownName="Edit all profiles" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f9a3dd20-f6bf-4f8c-afce-f1699f1e7c7b" name="Admin" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="3b83800e-68f1-4811-b183-5a20c9738e7b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="3aa8e055-9788-49d8-9a32-dc62c8705077" name="Edit all profiles" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="fb4d87ba-8853-4c9c-8dad-f1228eaefa4a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="06c11a2e-2098-4b81-87d8-d0901be19919" />
+          </association>
+          <association Id="eedea420-430e-4209-96e1-dd311007280b" isDerived="false" sourceEndRoleName="Admin" targetEndRoleName="Delete all photos" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="3df9b87d-b0fc-40f7-97d1-781d263b4bdd" LastKnownName="Delete all photos" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a54eb8fc-c1d8-4e33-957e-5047cc09cb52" name="Admin" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="7477626d-ef79-42d5-9bf7-41fba041fc2b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c631c3ec-f350-4993-933f-787bf7d5a22a" name="Delete all photos" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="c5829136-fdcb-423d-96c2-7a6df10a3a84" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="850518e3-a63b-4037-bc1b-6fba2fa6a60a" />
+          </association>
+          <association Id="c3b6d1a6-f441-412d-819c-68a7c79b1237" isDerived="false" sourceEndRoleName="Admin" targetEndRoleName="Edit all photos" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="61291ca7-325d-442c-9d30-5ba2015b90a8" LastKnownName="Edit all photos" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d127309f-5c31-4826-88a1-5c90c51ad39e" name="Admin" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="ba49baf3-5216-4de3-b40f-115aefc0dd5a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="1f143975-9071-4e21-baf4-214169e22f41" name="Edit all photos" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="97fabf93-d906-4cd4-a281-5fcab1624336" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="9610e757-a16a-46b3-bfde-e865e1bce11b" />
+          </association>
+          <association Id="0adac401-f5a8-492a-ad0f-c02f7d1a9faa" isDerived="false" sourceEndRoleName="Admin" targetEndRoleName="Search profiles" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="b05a898e-c0c6-486a-b1b1-e9972037d4ba" LastKnownName="Search profiles" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="991a6eb1-37e6-4337-bafd-0cf43844d91c" name="Admin" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="5ba639d6-8f7f-484d-8317-33a093f4b5ae" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="8d93283b-9ddd-424e-a4a9-080dbf69ee86" name="Search profiles" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="735f4860-da15-436e-8fea-18e92686ba18" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="97f652bb-16d7-4ce2-9112-881a5893e761" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="c7d12baf-804e-4089-8242-46ed9d44f254" name="View all photos" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="c5ce6d65-fe30-4c63-b363-c6daf4c7ab12" />
+        <subjects>
+          <subsystemMoniker Id="260d17dc-747c-47ac-9d9c-898f45916344" LastKnownName="Photocom" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="54fe4bcd-903d-40d6-a762-b5355227985f" name="Sign-up" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="97e543a4-8e44-4b5f-984f-a094eb61bd26" />
+        <subjects>
+          <subsystemMoniker Id="260d17dc-747c-47ac-9d9c-898f45916344" LastKnownName="Photocom" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="65c7aaca-a1da-4102-9de1-5645e177afa2" name="Sign-in" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="519838dd-8bd8-44aa-85af-40deeae19783" />
+        <subjects>
+          <subsystemMoniker Id="260d17dc-747c-47ac-9d9c-898f45916344" LastKnownName="Photocom" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="bfe94d6e-f78f-4cfc-9d0b-b6173abd1156" name="View own profile" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="1e008567-602f-4ef4-ae39-8e5ec318d667" />
+        <subjects>
+          <subsystemMoniker Id="260d17dc-747c-47ac-9d9c-898f45916344" LastKnownName="Photocom" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="af0af801-1f16-447c-8c14-4cf02baabe96" name="View other profiles" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="b144fb19-e77c-4321-9352-f250d9765f55" />
+        <extendedCases>
+          <extend Id="a436309c-39c0-4501-8306-b8897f046d9e">
+            <useCaseMoniker Id="bfe94d6e-f78f-4cfc-9d0b-b6173abd1156" LastKnownName="View own profile" />
+            <elementDefinition Id="0bb9537f-0cee-4c5d-a5d8-11de990bd998" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker Id="260d17dc-747c-47ac-9d9c-898f45916344" LastKnownName="Photocom" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="e67b67ee-28a4-4c98-b706-bf46ca295875" name="Edit own profile" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="3cdccd14-4290-4d4d-8949-6f4b0a9069fb" />
+        <subjects>
+          <subsystemMoniker Id="260d17dc-747c-47ac-9d9c-898f45916344" LastKnownName="Photocom" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="78621082-7e07-4920-a898-72910b8dcd37" name="Load photo" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="0260cbc9-b1af-4f31-a433-3d80e6478db0" />
+        <additions>
+          <include Id="b7e01d73-e2f2-4875-8a21-45ec8350d17b">
+            <useCaseMoniker Id="670fb3e9-1498-424e-9bba-c44104f5ff6c" LastKnownName="Edit title" />
+            <elementDefinition Id="9daccb0f-683a-4145-8d0c-5ba0ea5c63d4" />
+          </include>
+          <include Id="5d535821-18e5-4c0a-8835-0c86b08a66d3">
+            <useCaseMoniker Id="87060673-6d46-4102-9965-debd16753a5b" LastKnownName="Edit description" />
+            <elementDefinition Id="17057fcb-4a96-4862-b5da-5506d0105f4b" />
+          </include>
+        </additions>
+        <subjects>
+          <subsystemMoniker Id="260d17dc-747c-47ac-9d9c-898f45916344" LastKnownName="Photocom" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="c841ca64-3492-4588-af58-200bba48f4ea" name="Like photo" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="3fddf5a1-fe12-4bba-908c-27fce1908c5e" />
+        <subjects>
+          <subsystemMoniker Id="260d17dc-747c-47ac-9d9c-898f45916344" LastKnownName="Photocom" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="5c7b4d4c-6f71-4d5a-a940-7319959c8cb4" name="Dislike photo" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="a28a882a-e868-4106-846f-8a4632650f24" />
+        <subjects>
+          <subsystemMoniker Id="260d17dc-747c-47ac-9d9c-898f45916344" LastKnownName="Photocom" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="a5a29e75-9412-4bfa-8091-4755f70727e5" name="Add comment" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="d187147c-f0e7-4d76-ac98-88f7ea98f673" />
+        <subjects>
+          <subsystemMoniker Id="260d17dc-747c-47ac-9d9c-898f45916344" LastKnownName="Photocom" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="4bfc7ec5-3950-41c7-9a4e-874a959c58a0" name="Remove own comment" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="900c2f2a-9206-4f3d-92c3-da602f69e5af" />
+        <subjects>
+          <subsystemMoniker Id="260d17dc-747c-47ac-9d9c-898f45916344" LastKnownName="Photocom" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="accb7fc2-786e-464f-946f-a59ec0b683a8" name="Edit all profiles" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="f242d1da-4bb5-402c-b079-8f5a7c2db6f3" />
+        <subjects>
+          <subsystemMoniker Id="260d17dc-747c-47ac-9d9c-898f45916344" LastKnownName="Photocom" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="ebfdae06-1da5-443b-af34-37afe2b0ae01" name="Delete own photo" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="c401bd11-6545-46f3-a284-322d8f27050e" />
+        <subjects>
+          <subsystemMoniker Id="260d17dc-747c-47ac-9d9c-898f45916344" LastKnownName="Photocom" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="87060673-6d46-4102-9965-debd16753a5b" name="Edit description" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="1eed73ea-b8ce-480c-b579-9d51ddb70757" />
+        <extendedCases>
+          <extend Id="61447e87-bd80-4303-8e2b-c482060053cd">
+            <useCaseMoniker Id="2b5885b2-eaa4-44a1-bf99-5a87cf857aab" LastKnownName="Edit own photo" />
+            <elementDefinition Id="1c056370-7aa1-4bae-aea9-26c7d749d268" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker Id="260d17dc-747c-47ac-9d9c-898f45916344" LastKnownName="Photocom" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="2b5885b2-eaa4-44a1-bf99-5a87cf857aab" name="Edit own photo" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="c8a92ab7-38af-4d43-b92b-940c4059e17a" />
+        <subjects>
+          <subsystemMoniker Id="260d17dc-747c-47ac-9d9c-898f45916344" LastKnownName="Photocom" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="670fb3e9-1498-424e-9bba-c44104f5ff6c" name="Edit title" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="f79b2a4d-746d-4828-94e7-6e515f50e82f" />
+        <extendedCases>
+          <extend Id="c2a7ab5f-61f7-432e-9e98-065a3874b23c">
+            <useCaseMoniker Id="2b5885b2-eaa4-44a1-bf99-5a87cf857aab" LastKnownName="Edit own photo" />
+            <elementDefinition Id="575c0b48-92ea-426a-b361-5331ffd47681" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker Id="260d17dc-747c-47ac-9d9c-898f45916344" LastKnownName="Photocom" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="3df9b87d-b0fc-40f7-97d1-781d263b4bdd" name="Delete all photos" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="56d55480-cdc9-4713-bd4c-4929e6aedcc0" />
+        <subjects>
+          <subsystemMoniker Id="260d17dc-747c-47ac-9d9c-898f45916344" LastKnownName="Photocom" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="61291ca7-325d-442c-9d30-5ba2015b90a8" name="Edit all photos" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="7c0d010a-e751-471b-9f9e-5893f8936548" />
+        <subjects>
+          <subsystemMoniker Id="260d17dc-747c-47ac-9d9c-898f45916344" LastKnownName="Photocom" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="260d17dc-747c-47ac-9d9c-898f45916344" name="Photocom" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="cd97330e-2d29-424e-bc77-cd7f8b2463c8" />
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="f7ce1570-d208-4c68-9626-bd322e4d7260" name="Web-server" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="2f40e30f-9042-46d9-8267-f68735febff1" />
+        <targetEnds>
+          <association Id="d614f54f-c1e6-4243-852b-636cfd37c404" isDerived="false" sourceEndRoleName="Web-server" targetEndRoleName="Provide data" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="02fc29c1-67e3-4638-9876-051c88f68565" LastKnownName="Provide data" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="702ba26c-1fbd-4711-9144-6da2a801a792" name="Web-server" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="2484ec37-9dc1-4158-b137-b48487badeca" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="21dff8aa-4bdb-4ac0-af4f-595756b5ca2e" name="Provide data" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="da023e48-58f9-4b8a-9bab-094f1edaa2cc" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="83766f6c-6db7-486d-9ea7-dd51475a58ff" />
+          </association>
+          <association Id="8b1df2fa-8131-4834-ac91-c06b6bf06b7d" isDerived="false" sourceEndRoleName="Web-server" targetEndRoleName="Process user actions" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="8df165db-4f93-4b8f-9fe6-0517fa7393ec" LastKnownName="Process user actions" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="68884be6-e111-4d42-b73f-2dbef32e77ab" name="Web-server" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="9e3e4155-942b-45ec-80d2-cb47726ee19e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ad3dd44a-fe6b-459e-9f42-3b9937e93995" name="Process user actions" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="3785ca20-aae4-4705-9581-8259e665df88" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="3dc7ff9e-2b38-43e2-a7e3-33dd1d345162" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="2b5f94ba-eb6a-4f18-8877-bcdbbf29c11f" name="Change language" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="dd56eb5c-dfcb-4fd0-893c-4348acc96db6" />
+        <subjects>
+          <subsystemMoniker Id="260d17dc-747c-47ac-9d9c-898f45916344" LastKnownName="Photocom" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="b05a898e-c0c6-486a-b1b1-e9972037d4ba" name="Search profiles" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="3b523478-cdd0-448c-974e-2c8b8aaa289d" />
+        <subjects>
+          <subsystemMoniker Id="260d17dc-747c-47ac-9d9c-898f45916344" LastKnownName="Photocom" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="02fc29c1-67e3-4638-9876-051c88f68565" name="Provide data" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="4e106d51-d181-4f31-89d9-e5ad1add664e" />
+        <subjects>
+          <subsystemMoniker Id="260d17dc-747c-47ac-9d9c-898f45916344" LastKnownName="Photocom" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="8df165db-4f93-4b8f-9fe6-0517fa7393ec" name="Process user actions" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="a3bdadeb-99f4-46a9-a23f-86650bb5b863" />
+        <subjects>
+          <subsystemMoniker Id="260d17dc-747c-47ac-9d9c-898f45916344" LastKnownName="Photocom" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="22f30cf5-3329-4c86-8d7d-600d1698a98c" name="Modeling">
+    <elementDefinition Id="afd4c78b-d222-4aae-a138-6ec3f60f6f2b" />
+  </package>
+</useCaseModelRoot>
