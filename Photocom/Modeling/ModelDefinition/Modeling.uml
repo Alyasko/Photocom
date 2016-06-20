@@ -1527,15 +1527,6 @@
         name="Send confirmation link"
         isAbstract="false"
         isLeaf="false">
-        <extendedCases>
-          <extend
-            Id="c89917f1-c028-408f-92c0-47095adaadb8">
-            <useCaseMoniker
-              Id="f234d973-9247-4c7d-8fd1-f6f747d79bd8"
-              LastKnownName="Activate account"
-              LastKnownLocation="Modeling.uml" />
-          </extend>
-        </extendedCases>
         <subjects>
           <subsystemMoniker
             Id="768b292d-cbeb-4c28-96bb-893bd2fbe393"
@@ -1564,6 +1555,15 @@
         name="Activate account"
         isAbstract="false"
         isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="91c32560-d9fb-4144-9666-790cb7a15a80">
+            <useCaseMoniker
+              Id="46736b2e-5523-4dd3-b4bb-bc7a39f8e268"
+              LastKnownName="Send confirmation link"
+              LastKnownLocation="Modeling.uml" />
+          </extend>
+        </extendedCases>
         <subjects>
           <subsystemMoniker
             Id="768b292d-cbeb-4c28-96bb-893bd2fbe393"

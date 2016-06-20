@@ -1,19 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="c954d38f-bd21-4c67-9d5c-fad37c85dec0" name="UseCaseDiagram.SignUp" linkedPackageId="a5e5e2a3-68b6-4bd9-ab6d-e382e73a325b" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
-  <profileInstances>
-    <packageHasProfileInstances Id="92b7867c-0ed2-4a42-9ffc-817421e4c17f">
-      <profileInstance Id="c1897a5c-b4e3-4761-bdda-9ba4141bbb0e" name="StandardProfileL2">
-        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
-      </profileInstance>
-      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="94878d11-5f26-4cc1-a577-bbb4a57c97e8">
-      <profileInstance Id="634a180b-fdce-492e-8eea-350f38b2b3bb" name="StandardProfileL3">
-        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
-      </profileInstance>
-      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
-    </packageHasProfileInstances>
-  </profileInstances>
   <packagedElements>
     <useCaseModelRootHasTypes>
       <actor Id="8b11c322-0e0b-4b18-8748-51a70755b8bd" name="User" isAbstract="false" isLeaf="false">
@@ -214,12 +200,6 @@
     <useCaseModelRootHasTypes>
       <useCase Id="f05a28e2-16fd-48e4-8da1-fe2066b14d5b" name="Send confirmation link" isAbstract="false" isLeaf="false">
         <elementDefinition Id="46736b2e-5523-4dd3-b4bb-bc7a39f8e268" />
-        <extendedCases>
-          <extend Id="bccea92f-c272-47da-9512-b6f626ba661f">
-            <useCaseMoniker Id="4a750f13-e36a-421e-b597-47a5ddd55705" LastKnownName="Activate account" />
-            <elementDefinition Id="c89917f1-c028-408f-92c0-47095adaadb8" />
-          </extend>
-        </extendedCases>
         <subjects>
           <subsystemMoniker Id="432eb28d-0b15-40cc-872b-408b5a8cba4e" LastKnownName="Sign-up" />
         </subjects>
@@ -236,6 +216,12 @@
     <useCaseModelRootHasTypes>
       <useCase Id="4a750f13-e36a-421e-b597-47a5ddd55705" name="Activate account" isAbstract="false" isLeaf="false">
         <elementDefinition Id="f234d973-9247-4c7d-8fd1-f6f747d79bd8" />
+        <extendedCases>
+          <extend Id="b91ee508-ccce-48e5-a247-8fba1a5ecbc3">
+            <useCaseMoniker Id="f05a28e2-16fd-48e4-8da1-fe2066b14d5b" LastKnownName="Send confirmation link" />
+            <elementDefinition Id="91c32560-d9fb-4144-9666-790cb7a15a80" />
+          </extend>
+        </extendedCases>
         <subjects>
           <subsystemMoniker Id="432eb28d-0b15-40cc-872b-408b5a8cba4e" LastKnownName="Sign-up" />
         </subjects>
@@ -257,5 +243,19 @@
   </packagedElements>
   <package Id="a5e5e2a3-68b6-4bd9-ab6d-e382e73a325b" name="Modeling">
     <elementDefinition Id="afd4c78b-d222-4aae-a138-6ec3f60f6f2b" />
+    <profileInstances>
+      <packageHasProfileInstances Id="92b7867c-0ed2-4a42-9ffc-817421e4c17f">
+        <profileInstance Id="c1897a5c-b4e3-4761-bdda-9ba4141bbb0e" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="94878d11-5f26-4cc1-a577-bbb4a57c97e8">
+        <profileInstance Id="634a180b-fdce-492e-8eea-350f38b2b3bb" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
   </package>
 </useCaseModelRoot>
