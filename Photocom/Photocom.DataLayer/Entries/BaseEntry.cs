@@ -11,7 +11,7 @@ namespace Photocom.DataLayer.Entries
 
         public TModel ConvertToModel<TModel>() where TModel : new()
         {
-            return ReflectionHelper.ConvertEntryToEntity<TModel>(ReflectionHelper.GetFullTypeName(this.GetType()), this);
+            return ReflectionHelper.ConvertClassInstances<TModel>(ReflectionHelper.GetFullTypeName(this.GetType()), this);
         }
     }
 }

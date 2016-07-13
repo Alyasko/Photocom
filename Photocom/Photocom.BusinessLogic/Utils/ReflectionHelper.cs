@@ -11,7 +11,7 @@ namespace Photocom.BusinessLogic.Utils
 {
     public static class ReflectionHelper
     {
-        public static TDest ConvertEntryToEntity<TDest>(string sourceTypeName, object sourceObject) where TDest : new()
+        public static TDest ConvertClassInstances<TDest>(string sourceTypeName, object sourceObject) where TDest : new()
         {
             Type sourceType = Type.GetType(sourceTypeName, true, true);
             TDest result = new TDest();

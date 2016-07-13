@@ -19,18 +19,9 @@ namespace Photocom.DataLayer
          
         public DbSet<CommentEntry> Comments { get; set; }
 
-        public DbSet<TestEntity> TestEntities { get; set; }
-
         //public DbSet<PermissionEntry> Permissions { get; set; }
 
         //public DbSet<PrivilegeEntry> Privileges { get; set; }
 
-    }
-
-    public class TestEntity
-    {
-        [Key]
-        public int Id { get; set; }
-        public string Text { get; set; }
     }
 }

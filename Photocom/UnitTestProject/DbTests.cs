@@ -11,11 +11,9 @@ namespace UnitTestProject
     [TestClass]
     public class DbTests
     {
-        [TestMethod]
-        public void TestSeedMethod()
+        //[TestMethod]
+        public void TestDbContextAdding()
         {
-            //Database.SetInitializer(new PhotocomDatabaseInitializer());
-            //UnitOfWork unitOfWork = new UnitOfWork();
 
             PhotocomContext context = new PhotocomContext();
 
@@ -49,17 +47,18 @@ namespace UnitTestProject
                 new CommentEntry() {Author = null, DateAdded = DateTime.Now, Text = "How are you?" }
             };
 
-            var asd = new List<TestEntity>()
-            {
-                new TestEntity() { Text = "123"},
-                new TestEntity() { Text = "asd"}
-            };
+            //context.Users.AddRange(users);
+            //context.SaveChanges();
+        }
 
-            context.Users.AddRange(users);
-            context.SaveChanges();
+        [TestMethod]
+        public void TestUnitOfWork()
+        {
+            UnitOfWork unitOfWork = new UnitOfWork();
 
+            var list = unitOfWork.UserRepository.GetAll().ToList();
 
-            //var list = unitOfWork.UserRepository.GetAll().ToList();
+            Assert.IsNotNull(list);
         }
     }
 }

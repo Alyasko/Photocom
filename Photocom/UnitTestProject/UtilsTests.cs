@@ -29,7 +29,7 @@ namespace UnitTestProject
 
             // Act
 
-            photo = ReflectionHelper.ConvertEntryToEntity<Photo>(ReflectionHelper.GetFullTypeName(typeof(PhotoEntry)), photoEntry);
+            photo = ReflectionHelper.ConvertClassInstances<Photo>(ReflectionHelper.GetFullTypeName(typeof(PhotoEntry)), photoEntry);
 
             // Assert
             Assert.AreEqual(photo.Comments, photoEntry.Comments);
