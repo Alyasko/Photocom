@@ -1,0 +1,16 @@
+D:\Projects\Web\Photocom\Photocom\Photocom.DataLayer\obj\Debug\Photocom.DataLayer.csprojResolveAssemblyReference.cache
+D:\Projects\Web\Photocom\Photocom\Photocom.DataLayer\bin\Debug\Photocom.DataLayer.dll.config
+D:\Projects\Web\Photocom\Photocom\Photocom.DataLayer\bin\Debug\Photocom.DataLayer.dll
+D:\Projects\Web\Photocom\Photocom\Photocom.DataLayer\bin\Debug\Photocom.DataLayer.pdb
+D:\Projects\Web\Photocom\Photocom\Photocom.DataLayer\bin\Debug\EntityFramework.dll
+D:\Projects\Web\Photocom\Photocom\Photocom.DataLayer\bin\Debug\EntityFramework.SqlServer.dll
+D:\Projects\Web\Photocom\Photocom\Photocom.DataLayer\bin\Debug\Photocom.BusinessLogic.dll
+D:\Projects\Web\Photocom\Photocom\Photocom.DataLayer\bin\Debug\Photocom.Contracts.dll
+D:\Projects\Web\Photocom\Photocom\Photocom.DataLayer\bin\Debug\Photocom.Models.dll
+D:\Projects\Web\Photocom\Photocom\Photocom.DataLayer\bin\Debug\Photocom.BusinessLogic.pdb
+D:\Projects\Web\Photocom\Photocom\Photocom.DataLayer\bin\Debug\Photocom.Contracts.pdb
+D:\Projects\Web\Photocom\Photocom\Photocom.DataLayer\bin\Debug\Photocom.Models.pdb
+D:\Projects\Web\Photocom\Photocom\Photocom.DataLayer\bin\Debug\EntityFramework.xml
+D:\Projects\Web\Photocom\Photocom\Photocom.DataLayer\bin\Debug\EntityFramework.SqlServer.xml
+D:\Projects\Web\Photocom\Photocom\Photocom.DataLayer\obj\Debug\Photocom.DataLayer.dll
+D:\Projects\Web\Photocom\Photocom\Photocom.DataLayer\obj\Debug\Photocom.DataLayer.pdb

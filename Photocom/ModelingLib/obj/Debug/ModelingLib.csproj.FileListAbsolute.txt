@@ -1,0 +1,5 @@
+D:\Projects\Web\Photocom\Photocom\ModelingLib\bin\Debug\ModelingLib.dll
+D:\Projects\Web\Photocom\Photocom\ModelingLib\bin\Debug\ModelingLib.pdb
+D:\Projects\Web\Photocom\Photocom\ModelingLib\obj\Debug\ModelingLib.csprojResolveAssemblyReference.cache
+D:\Projects\Web\Photocom\Photocom\ModelingLib\obj\Debug\ModelingLib.dll
+D:\Projects\Web\Photocom\Photocom\ModelingLib\obj\Debug\ModelingLib.pdb

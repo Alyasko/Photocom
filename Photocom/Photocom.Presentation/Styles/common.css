@@ -1,0 +1,33 @@
+html {
+  font-family: "Segoe UI"; }
+
+body {
+  background-color: white;
+  margin: 0;
+  padding: 0; }
+
+a {
+  text-decoration: none;
+  color: #747474; }
+
+.no-select {
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none; }
+
+.clear-both:after {
+  display: block;
+  content: "";
+  clear: both; }
+
+a.dark-link {
+  color: #747474; }
+
+a.dark-link:hover {
+  color: #65c660; }
+
+a.dark-link:active {
+  color: #7bce77; }
+
+/*# sourceMappingURL=common.css.map */

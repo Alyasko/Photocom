@@ -1,0 +1,43 @@
+﻿@import 'definitions.scss';
+
+html {
+    font-family: "Segoe UI";
+}
+
+body {
+    background-color: $bg-color;
+    margin: 0;
+    padding: 0;
+
+}
+
+a {
+    text-decoration: none;
+    color: $dark-gray-text-color;
+}
+
+.no-select {
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.clear-both:after {
+    display: block;
+    content: "";
+    clear: both;
+}
+
+a.dark-link  {
+    color: $dark-gray-text-color;
+}
+
+a.dark-link:hover {
+    color: $green-color;
+}
+
+a.dark-link:active {
+    color: $light-green-color;
+}
+

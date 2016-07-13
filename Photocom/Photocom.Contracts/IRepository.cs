@@ -6,8 +6,18 @@ using System.Threading.Tasks;
 
 namespace Photocom.Contracts
 {
-    public interface IRepository
+    public interface IRepository<TEntity> where TEntity: class
     {
+        void Insert(TEntity entity);
 
+        void Update(TEntity entity);
+
+        void Delete(TEntity entity);
+
+        IEnumerable<TEntity> GetAll();
+
+        IEnumerable<TEntity> FindAll(Func<TEntity, bool> expression);
+
+        TEntity First(Func<TEntity, bool> expression);
     }
 }

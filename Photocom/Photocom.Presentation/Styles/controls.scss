@@ -1,0 +1,61 @@
+﻿@import 'definitions.scss';
+
+.green-form input[type=text],
+.green-form input[type=password] {
+    outline: none;
+    font-family: "Segoe UI";
+
+    background-color: white;
+    border: 1px solid $light-gray-color;
+
+    font-size: 18px;
+    color: $dark-gray-text-color;
+    padding: 5px;
+}
+
+.green-form input[type=text]:focus,
+.green-form input[type=password]:focus  {
+    border: 1px solid $green-color;
+}
+
+.green-form input[type=submit] {
+    outline: none;
+    font-family: "Segoe UI";
+
+    background-color: #d3dad3;
+    border: none;
+
+    font-size: 18px;
+    color: $dark-gray-text-color;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    padding: 5px;
+}
+
+.green-form input[type=submit]:hover {
+    background-color: $green-color;
+    color: white;
+}
+
+.green-form input[type=submit]:active {
+    background-color: $light-green-color;
+    color: white;
+}
+
+.green-form textarea {
+    outline: none;
+    font-family: "Segoe UI";
+
+    background-color: white;
+    border: 1px solid $light-gray-color;
+
+    font-size: 18px;
+    color: $dark-gray-text-color;
+    padding: 5px;
+}
+
+.green-form textarea:focus {
+    border: 1px solid $green-color;
+}
+
+
+

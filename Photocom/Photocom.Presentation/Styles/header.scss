@@ -1,0 +1,174 @@
+﻿@import 'definitions.scss';
+
+
+header {
+    background-color: $header-bg-color;
+    position: relative;
+
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 20px;
+
+    overflow: hidden;
+    height: 136px;
+    transition: height $login-header-transition-delay ease-in-out;
+    //height: 75px;
+
+    z-index: 10;
+}
+
+
+.header-collapsed {
+    height: 75px;
+}
+
+.header-collapsed #logo-first, .header-collapsed #logo-second {
+    font-size: 40px;
+}
+
+.header-collapsed #menu{
+    opacity: 0;
+}
+
+//------------------------------- Logo -------------------------------//
+
+#logo {
+    float: left;
+}
+
+#logo-wrapper {
+    margin: 0;
+    padding: 10px 35px 0px 35px;
+}
+
+#logo-first, #logo-second {
+    font-family: 'Segoe UI';
+    font-weight: bold;
+    font-size: 50px;
+
+    transition: font-size $login-header-transition-delay ease-in-out;
+
+    display: inline-block;
+}
+
+#logo-first a {
+    color: $dark-gray-text-color;
+}
+
+#logo-second a {
+    color: $green-color;
+}
+
+//------------------------------- Menu -------------------------------//
+
+#menu {
+    float: left;
+    clear: left;
+
+    opacity: 1;
+    transition: opacity 0.1s ease-in-out;
+}
+
+#menu ul {
+    margin: 0;
+}
+
+#menu li {
+    list-style: none;
+    color: $dark-gray-text-color;
+    font-size: $menu-font-size;
+
+    padding: 5px 15px 25px;
+
+    display: inline-block;
+
+    cursor: pointer;
+
+    transition: box-shadow 0.5s;
+}
+
+#menu li:hover {
+    background-color: $green-color;
+    color: $header-bg-color;
+
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 15px inset;
+}
+
+#menu li:active {
+    background-color: $light-green-color;
+}
+
+#menu li:first-child {
+    margin-left: -18px;
+}
+
+#menu a {
+    
+}
+
+
+//------------------------------- Buttons -------------------------------//
+
+#toolbar {
+    float: right;
+    clear: right;
+
+    margin: 18px 18px 0px 0px;
+}
+
+.toolbar-btn {
+
+}
+
+.toolbar-btn svg {
+    fill: $light-gray-color;
+}
+
+.toolbar-btn svg:hover {
+    fill: $green-color;
+}
+
+.toolbar-btn svg:active {
+    fill: $light-green-color;
+}
+
+#lang {
+    float: right;
+
+    margin-right: 15px;
+    margin-top: 5px;
+}
+
+#user {
+    float: right;
+}
+
+#search {
+    float: right;
+    clear: right;
+
+    margin-top: 10px;
+}
+
+#search-bar {
+    display: none;
+}
+
+//---------------------- Overflow shadow ----------------------//
+
+#overlapping-shadow {
+    position: fixed;
+    display: none;
+
+    cursor: pointer;
+
+    top: 0px;
+    height: 100vh;
+
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    transition: background-color 0.3s ease-in-out;
+    z-index: 9;
+}
+
+#overlapping-shadow:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}

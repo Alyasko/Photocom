@@ -1,0 +1,14 @@
+D:\Projects\Web\Photocom\Photocom\Photocom.BusinessLogic\bin\Debug\Photocom.BusinessLogic.dll
+D:\Projects\Web\Photocom\Photocom\Photocom.BusinessLogic\bin\Debug\Photocom.BusinessLogic.pdb
+D:\Projects\Web\Photocom\Photocom\Photocom.BusinessLogic\obj\Debug\Photocom.BusinessLogic.csprojResolveAssemblyReference.cache
+D:\Projects\Web\Photocom\Photocom\Photocom.BusinessLogic\obj\Debug\Photocom.BusinessLogic.dll
+D:\Projects\Web\Photocom\Photocom\Photocom.BusinessLogic\obj\Debug\Photocom.BusinessLogic.pdb
+D:\Projects\Web\Photocom\Photocom\Photocom.BusinessLogic\bin\Debug\Photocom.Contracts.dll
+D:\Projects\Web\Photocom\Photocom\Photocom.BusinessLogic\bin\Debug\Photocom.Models.dll
+D:\Projects\Web\Photocom\Photocom\Photocom.BusinessLogic\bin\Debug\Photocom.Contracts.pdb
+D:\Projects\Web\Photocom\Photocom\Photocom.BusinessLogic\bin\Debug\Photocom.Models.pdb
+D:\Projects\Web\Photocom\Photocom\Photocom.BusinessLogic\bin\Debug\Photocom.BusinessLogic.dll.config
+D:\Projects\Web\Photocom\Photocom\Photocom.BusinessLogic\bin\Debug\EntityFramework.dll
+D:\Projects\Web\Photocom\Photocom\Photocom.BusinessLogic\bin\Debug\EntityFramework.SqlServer.dll
+D:\Projects\Web\Photocom\Photocom\Photocom.BusinessLogic\bin\Debug\EntityFramework.xml
+D:\Projects\Web\Photocom\Photocom\Photocom.BusinessLogic\bin\Debug\EntityFramework.SqlServer.xml

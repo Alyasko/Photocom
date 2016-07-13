@@ -1,0 +1,40 @@
+#login-popup {
+  position: absolute;
+  display: none;
+  top: 135px;
+  width: 400px;
+  background-color: #ededed;
+  z-index: 12;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 20px; }
+  #login-popup #form-wrapper {
+    margin: 15px 30px 20px 30px; }
+  #login-popup h2 {
+    font-weight: normal;
+    color: #747474;
+    padding: 0;
+    margin: 0; }
+  #login-popup input[type=text], #login-popup input[type=password] {
+    width: 329px;
+    margin: 10px 0 0 0; }
+  #login-popup #tb-login {
+    margin-top: 15px; }
+  #login-popup #tb-email {
+    margin-top: 20px; }
+  #login-popup #tb-pass {
+    margin-top: 10px; }
+  #login-popup #ta-about {
+    height: 100px;
+    width: 329px;
+    margin: 20px 0 0 0; }
+  #login-popup #login-btn-wrapper {
+    text-align: center; }
+  #login-popup #login-btn {
+    width: 340px;
+    margin: 10px 0px 0px 0px; }
+  #login-popup #login-links {
+    margin-top: 3px; }
+
+.dark-link#sign-up {
+  float: right; }
+
+/*# sourceMappingURL=auth.css.map */

@@ -1,0 +1,32 @@
+﻿
+@{
+    Layout = "~/Views/_Layout.cshtml";
+}
+
+@section Scripts {
+
+}
+
+@section Styles {
+    @Styles.Render("~/Styles/main.css")
+}
+
+<div id="user-wrapper">
+    <div id="user-photo-wrapper">
+        <img id="user-photo" src="#"/>
+    </div>
+    <div id="user-identity-wrapper">
+        Name:
+        <div id="user-first-name">Alexander</div>
+        <div id="user-last-name">Yasko</div>
+    </div>
+    <div id="user-about-wrapper">
+        About:
+        <div>I am a student from CSN.</div>
+    </div>
+    <div id="user-photos-wrapper">
+        <div id="user-photos">
+            <!--Photos here...-->
+        </div>
+    </div>
+</div>

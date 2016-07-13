@@ -1,0 +1,56 @@
+#photo-container {
+  margin: 25px;
+  text-align: center;
+  min-height: 80vh; }
+
+.photo {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  width: 300px;
+  height: 200px;
+  margin: 10px;
+  background-color: #65c660;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 0px;
+  transition: box-shadow 0.2s ease-in-out;
+  overflow: hidden; }
+
+.photo:hover {
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 15px 20px; }
+
+.photo-info {
+  position: absolute;
+  width: 300px; }
+
+.photo-likes, .photo-comments, .photo-author {
+  position: absolute;
+  top: 5px;
+  color: white; }
+
+.photo-likes {
+  left: 5px; }
+
+.photo-comments {
+  top: 25px;
+  left: 5px; }
+
+.photo-author {
+  right: 5px; }
+
+.author-photo-link {
+  color: white; }
+
+.author-photo-link:hover {
+  text-decoration: underline; }
+
+.photo-image {
+  max-height: 200px; }
+
+.show-info {
+  display: block;
+  opacity: 1; }
+
+.hide-info {
+  display: none; }
+
+/*# sourceMappingURL=main.css.map */

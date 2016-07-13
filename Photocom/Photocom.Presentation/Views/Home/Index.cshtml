@@ -1,0 +1,31 @@
+﻿@{
+    Layout = "~/Views/_Layout.cshtml";
+}
+
+@section Scripts {
+
+}
+
+@section Styles {
+    @Styles.Render("~/Styles/main.css")
+}
+
+<div id="photo-container" class="clear-both">
+    @for (int i = 0; i < 10; i++)
+    {
+        <div class="photo">
+            <div class="photo-info hide-info">
+                <div class="photo-likes">Likes 10</div>
+                <div class="photo-author">
+                    @Html.ActionLink("Alyasko", "ViewProfile", "User", new { @id = "alyasko" }, new { @class = "author-photo-link" })
+                </div>
+                <div class="photo-comments">Comments 10</div>
+            </div>
+
+            <div class="photo-wrapper">
+                <img class="photo-image" src="~/Photos/snb.jpg"/>
+            </div>
+        </div>
+    }
+
+</div>
