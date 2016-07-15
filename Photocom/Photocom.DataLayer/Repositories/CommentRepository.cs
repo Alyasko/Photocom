@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using Photocom.Contracts;
 using Photocom.Contracts.Repositories;
 using Photocom.DataLayer.Repositories;
-using Photocom.Models.Entities;
+using Photocom.Models.Entities.Database;
 
 namespace Photocom.DataLayer.Repositories
 {
@@ -19,27 +19,27 @@ namespace Photocom.DataLayer.Repositories
 
         public IEnumerable<Comment> GetCommentsByUser(User user)
         {
-            throw new NotImplementedException();
+            return DbContext.Set<Comment>().Where(x => x.Author == user).ToList();
         }
 
         public IEnumerable<Comment> GetCommentsByDate(DateTime date)
         {
-            throw new NotImplementedException();
+            return DbContext.Set<Comment>().Where(x => x.DateAdded == date).ToList();
         }
 
         public IEnumerable<Comment> GetCommentsByDate(DateTime startDate, DateTime endDate)
         {
-            throw new NotImplementedException();
+            return DbContext.Set<Comment>().Where(x => x.DateAdded >= startDate && x.DateAdded <= endDate).ToList();
         }
 
         public IEnumerable<Comment> GetCommentsByKeywords(string keywords)
         {
-            throw new NotImplementedException();
+            return DbContext.Set<Comment>().Where(x => x.Text.Contains(keywords)).ToList();
         }
 
         public IEnumerable<Comment> GetCommentsByPhoto(Photo photo)
         {
-            throw new NotImplementedException();
+            return DbContext.Set<Photo>().First(x => x == photo).Comments.ToList();
         }
     }
 }

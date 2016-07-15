@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Photocom.Contracts.Repositories;
 using Photocom.DataLayer.Repositories;
-using Photocom.Models.Entities;
+using Photocom.Models.Entities.Database;
 
 namespace Photocom.DataLayer.Repositories
 {

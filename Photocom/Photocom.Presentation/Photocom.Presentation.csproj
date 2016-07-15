@@ -82,12 +82,24 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
@@ -195,6 +207,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AuthController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PartialController.cs" />
     <Compile Include="Controllers\UserController.cs" />
@@ -256,6 +269,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="Images\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\Auth\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -263,9 +277,10 @@
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="TScripts\App.ts" />
+    <TypeScriptCompile Include="TScripts\Auth.ts" />
     <TypeScriptCompile Include="TScripts\Helpers.ts" />
     <TypeScriptCompile Include="TScripts\jquery.d.ts" />
-    <TypeScriptCompile Include="TScripts\Auth.ts" />
+    <TypeScriptCompile Include="TScripts\AuthView.ts" />
     <TypeScriptCompile Include="TScripts\Main.ts" />
     <TypeScriptCompile Include="TScripts\Photo.ts" />
     <TypeScriptCompile Include="TScripts\Search.ts" />
@@ -281,6 +296,14 @@
     <ProjectReference Include="..\Photocom.Contracts\Photocom.Contracts.csproj">
       <Project>{67edfd9f-e069-446c-bb94-a289700917e2}</Project>
       <Name>Photocom.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Photocom.DatabaseEntries\Photocom.Models.csproj">
+      <Project>{C616BDE3-9DB5-4EE0-8125-98CF133EE769}</Project>
+      <Name>Photocom.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Photocom.DataLayer\Photocom.DataLayer.csproj">
+      <Project>{c656fcd3-34e3-4557-8a57-3105fff7a0dd}</Project>
+      <Name>Photocom.DataLayer</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

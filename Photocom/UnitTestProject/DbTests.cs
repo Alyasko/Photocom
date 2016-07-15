@@ -3,23 +3,24 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Photocom.Contracts;
 using Photocom.DataLayer;
-using Photocom.DataLayer.Entries;
+using Photocom.Models.Entities.Database;
 
 namespace UnitTestProject
 {
     [TestClass]
     public class DbTests
     {
-        //[TestMethod]
+        [TestMethod]
         public void TestDbContextAdding()
         {
 
             PhotocomContext context = new PhotocomContext();
 
-            List<UserEntry> users = new List<UserEntry>()
+            List<User> users = new List<User>()
             {
-                new UserEntry()
+                new User()
                 {
                     AboutUser = "Nice man",
                     Email = "someone@example.com",
@@ -29,7 +30,7 @@ namespace UnitTestProject
                     Password = "123",
                     SignUpDate = DateTime.Now
                 },
-                new UserEntry()
+                new User()
                 {
                     AboutUser = "My girl",
                     Email = "someone@example.com",
@@ -41,14 +42,14 @@ namespace UnitTestProject
                 }
             };
 
-            List<CommentEntry> comments = new List<CommentEntry>()
+            List<Comment> comments = new List<Comment>()
             {
-                new CommentEntry() {Author = null, DateAdded = DateTime.Now, Text = "Hey!" },
-                new CommentEntry() {Author = null, DateAdded = DateTime.Now, Text = "How are you?" }
+                new Comment() {Author = null, DateAdded = DateTime.Now, Text = "Hey!" },
+                new Comment() {Author = null, DateAdded = DateTime.Now, Text = "How are you?" }
             };
 
-            //context.Users.AddRange(users);
-            //context.SaveChanges();
+            context.Users.AddRange(users);
+            context.SaveChanges();
         }
 
         [TestMethod]
@@ -59,6 +60,14 @@ namespace UnitTestProject
             var list = unitOfWork.UserRepository.GetAll().ToList();
 
             Assert.IsNotNull(list);
+        }
+
+        [TestMethod]
+        public void TestAddingViaUnitOfWork()
+        {
+            IUnitOfWork unitOfWork = new UnitOfWork();
+
+            var users = unitOfWork.UserRepository.GetAll();
         }
     }
 }

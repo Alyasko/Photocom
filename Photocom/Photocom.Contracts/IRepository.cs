@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Photocom.Contracts
 {
-    public interface IRepository<TEntity, TEntry> where TEntity : class where TEntry : class
+    public interface IRepository<TEntity> where TEntity : class
     {
         void Insert(TEntity entity);
 

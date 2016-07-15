@@ -1,12 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.Entity;
-using Photocom.DataLayer.Entries;
 
 namespace Photocom.DataLayer
 {
-    public class PhotocomDatabaseInitializer// : DropCreateDatabaseIfModelChanges<PhotocomContext>
+    public class PhotocomDatabaseInitializer : DropCreateDatabaseIfModelChanges<PhotocomContext>
     {
+        protected override void Seed(PhotocomContext context)
+        {
+
+
+            base.Seed(context);
+        }
+
         //public override void InitializeDatabase(PhotocomContext context)
         //{
         //    base.InitializeDatabase(context);

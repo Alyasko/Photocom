@@ -8,12 +8,18 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Photocom.Models.Entities;
+using Photocom.Models.Entities.Database;
+using Photocom.Models.Entities.Database;
 
-namespace Photocom.Models.Entities
+namespace Photocom.Models.Entities.Database
 {
-    public class Photo
+    public class Photo : BaseEntity
     {
+        public virtual void Like()
+        {
+            throw new System.NotImplementedException();
+        }
+
         public virtual IList<Comment> Comments { get; set; }
 
         public virtual IList<string> HashTags { get; set; }
@@ -22,10 +28,10 @@ namespace Photocom.Models.Entities
 
         public virtual IList<User> Likes { get; set; }
 
-        public virtual void Like()
-        {
-            throw new System.NotImplementedException();
-        }
+        public virtual Category Category { get; set; }
+
+        public virtual User Author { get; set; }
+
 
         public DateTime PublicationDate { get; set; }
 

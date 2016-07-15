@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using Photocom.Models.Entities;
+using Photocom.Models.Entities.Database;
 
 namespace Photocom.Contracts.Repositories
 {

@@ -86,3 +86,11 @@ D:\Projects\Web\Photocom\Photocom\Photocom.Presentation\bin\Photocom.Models.dll
 D:\Projects\Web\Photocom\Photocom\Photocom.Presentation\bin\Photocom.BusinessLogic.pdb
 D:\Projects\Web\Photocom\Photocom\Photocom.Presentation\bin\Photocom.Contracts.pdb
 D:\Projects\Web\Photocom\Photocom\Photocom.Presentation\bin\Photocom.Models.pdb
+D:\Projects\Web\Photocom\Photocom\Photocom.Presentation\bin\System.Net.Http.Formatting.dll
+D:\Projects\Web\Photocom\Photocom\Photocom.Presentation\bin\System.Web.Http.dll
+D:\Projects\Web\Photocom\Photocom\Photocom.Presentation\bin\System.Web.Http.WebHost.dll
+D:\Projects\Web\Photocom\Photocom\Photocom.Presentation\bin\System.Net.Http.Formatting.xml
+D:\Projects\Web\Photocom\Photocom\Photocom.Presentation\bin\System.Web.Http.xml
+D:\Projects\Web\Photocom\Photocom\Photocom.Presentation\bin\System.Web.Http.WebHost.xml
+D:\Projects\Web\Photocom\Photocom\Photocom.Presentation\bin\Photocom.DataLayer.dll
+D:\Projects\Web\Photocom\Photocom\Photocom.Presentation\bin\Photocom.DataLayer.pdb

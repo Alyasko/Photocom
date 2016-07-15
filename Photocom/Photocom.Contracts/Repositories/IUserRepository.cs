@@ -1,5 +1,5 @@
 ﻿using System;
-using Photocom.Models.Entities;
+using Photocom.Models.Entities.Database;
 
 namespace Photocom.Contracts.Repositories
 {

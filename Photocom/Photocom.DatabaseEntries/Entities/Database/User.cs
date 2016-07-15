@@ -8,10 +8,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Photocom.Models.Entities.Database;
 
-namespace Photocom.Models.Entities
+namespace Photocom.Models.Entities.Database
 {
-    public class User
+    public class User : BaseEntity
     {
         public virtual string FirstName { get; set; }
 

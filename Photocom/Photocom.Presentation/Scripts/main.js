@@ -31,4 +31,4 @@ var Main = (function () {
     };
     return Main;
 }());
-//# sourceMappingURL=main.js.map
+//# sourceMappingURL=Main.js.map

@@ -1,6 +1,6 @@
 ﻿using System.Data.Entity;
 using Photocom.Contracts.Repositories;
-using Photocom.Models.Entities;
+using Photocom.Models.Entities.Database;
 
 namespace Photocom.DataLayer.Repositories
 {

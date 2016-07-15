@@ -8,11 +8,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Photocom.Models.Entities;
+using Photocom.Models.Entities.Database;
+using Photocom.Models.Entities.Database;
 
-namespace Photocom.Models.Entities
+namespace Photocom.Models.Entities.Database
 {
-    public class Privilege
+    public class Privilege : BaseEntity
     {
         public virtual IEnumerable<Permission> Permissions { get; set; }
 

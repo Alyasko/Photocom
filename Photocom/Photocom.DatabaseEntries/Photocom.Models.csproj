@@ -40,13 +40,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entities\Category.cs" />
-    <Compile Include="Entities\Comment.cs" />
-    <Compile Include="Entities\Permission.cs" />
-    <Compile Include="Entities\Photo.cs" />
-    <Compile Include="Entities\Privilege.cs" />
-    <Compile Include="Entities\User.cs" />
+    <Compile Include="Entities\Database\BaseEntity.cs" />
+    <Compile Include="Entities\Database\Category.cs" />
+    <Compile Include="Entities\Database\Comment.cs" />
+    <Compile Include="Entities\Database\Permission.cs" />
+    <Compile Include="Entities\Database\Photo.cs" />
+    <Compile Include="Entities\Database\Privilege.cs" />
+    <Compile Include="Entities\Database\Session.cs" />
+    <Compile Include="Entities\Database\User.cs" />
+    <Compile Include="Entities\LoginRequestData.cs" />
+    <Compile Include="Entities\UserLoginInfo.cs" />
+    <Compile Include="Entities\UserSignUpInfo.cs" />
+    <Compile Include="Enums\Validation\LoginResult.cs" />
+    <Compile Include="Enums\Validation\SignUpResult.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Enums\Validation\LogoutResult.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

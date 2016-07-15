@@ -1,4 +1,4 @@
-﻿using Photocom.Models.Entities;
+﻿using Photocom.Models.Entities.Database;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -19,27 +19,27 @@ namespace Photocom.DataLayer.Repositories
 
         public User GetUserByLogin(string login)
         {
-            return DbContext.Set<User>().First(x => x.Login.Equals(login));
+            return DbContext.Set<User>().FirstOrDefault(x => x.Login.Equals(login));
         }
 
         public User GetUserByGuid(Guid guid)
         {
-            throw new NotImplementedException();
+            return DbContext.Set<User>().FirstOrDefault(x => x.GUID == guid);
         }
 
         public User GetUserBySignUpDate(DateTime date)
         {
-            throw new NotImplementedException();
+            return DbContext.Set<User>().FirstOrDefault(x => x.SignUpDate == date);
         }
 
         public User GetUserBySignUpDate(DateTime startDate, DateTime endDate)
         {
-            throw new NotImplementedException();
+            return DbContext.Set<User>().FirstOrDefault(x => x.SignUpDate >= startDate && x.SignUpDate <= endDate);
         }
 
         public User GetUserByPassword(string password)
         {
-            throw new NotImplementedException();
+            return DbContext.Set<User>().FirstOrDefault(x => x.Password.Equals(password));
         }
 
     }

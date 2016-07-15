@@ -62,6 +62,7 @@
   </Choose>
   <ItemGroup>
     <Compile Include="DbTests.cs" />
+    <Compile Include="AuthControllerTests.cs" />
     <Compile Include="UtilsTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

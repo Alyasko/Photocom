@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Photocom.BusinessLogic.Utils;
-using Photocom.DataLayer.Entries;
-using Photocom.Models.Entities;
+using Photocom.Models.Entities.Database;
 
 namespace UnitTestProject
 {
@@ -16,20 +15,19 @@ namespace UnitTestProject
         {
             // Arrange
             DateTime time = DateTime.Now;
-            PhotoEntry photoEntry = new PhotoEntry()
+            Photo photoEntry = new Photo()
             {
                 Description = "Hello",
-                Likes = new List<UserEntry>(),
-                Comments = new List<CommentEntry>(),
+                Likes = new List<User>(),
+                Comments = new List<Comment>(),
                 HashTags = new List<string>(),
                 PublicationDate = time,
-                Id = 101
             };
             Photo photo = null;
 
             // Act
 
-            photo = ReflectionHelper.ConvertClassInstances<Photo>(ReflectionHelper.GetFullTypeName(typeof(PhotoEntry)), photoEntry);
+            photo = ReflectionHelper.ConvertClassInstances<Photo>(ReflectionHelper.GetFullTypeName(typeof(Photo)), photoEntry);
 
             // Assert
             Assert.AreEqual(photo.Comments, photoEntry.Comments);
@@ -42,7 +40,7 @@ namespace UnitTestProject
         [TestMethod]
         public void TestConvertToModelMethodOfEntry()
         {
-            UserEntry userEntry = new UserEntry()
+            User userEntry = new User()
             {
                 AboutUser = "I am a man",
                 SignUpDate = DateTime.Now,
@@ -51,7 +49,6 @@ namespace UnitTestProject
                 LastName = "Yasko",
                 Email = "null",
                 Password = "123",
-                Id = 100,
                 GUID = Guid.NewGuid()
             };
 

@@ -2,6 +2,7 @@ var App = (function () {
     function App() {
         App._authView = null;
         App._search = null;
+        App._auth = null;
     }
     Object.defineProperty(App, "authView", {
         get: function () {
@@ -9,6 +10,16 @@ var App = (function () {
                 App._authView = new AuthView();
             }
             return App._authView;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(App, "auth", {
+        get: function () {
+            if (App._auth == null) {
+                App._auth = new Auth();
+            }
+            return App._auth;
         },
         enumerable: true,
         configurable: true

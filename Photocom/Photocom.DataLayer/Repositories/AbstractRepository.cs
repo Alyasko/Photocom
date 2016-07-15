@@ -7,9 +7,8 @@ using Photocom.Contracts;
 
 namespace Photocom.DataLayer.Repositories
 {
-    public abstract class AbstractRepository<TEntity, TEntry> : IRepository<TEntity, TEntry> 
-        where TEntity : class, new ()
-        where TEntry : class, new()
+    public abstract class AbstractRepository<TEntity> : IRepository<TEntity> 
+        where TEntity : class
     {
         protected AbstractRepository(DbContext context)
         {
@@ -18,56 +17,34 @@ namespace Photocom.DataLayer.Repositories
 
         public virtual void Insert(TEntity entity)
         {
-            DbContext.Set<TEntry>().Add(ConvertEntityToEntry(entity));
+            DbContext.Set<TEntity>().Add(entity);
         }
 
         public virtual void Update(TEntity entity)
         {
-            TEntry entry = ConvertEntityToEntry(entity);
-            DbContext.Set<TEntry>().Attach(entry);
-            DbContext.Entry(entry).State = EntityState.Modified;
+            DbContext.Set<TEntity>().Attach(entity);
+            DbContext.Entry(entity).State = EntityState.Modified;
         }
 
         public virtual void Delete(TEntity entity)
         {
-            DbContext.Set<TEntry>().Remove(ConvertEntityToEntry(entity));
+            DbContext.Set<TEntity>().Remove(entity);
         }
 
         public virtual IEnumerable<TEntity> GetAll()
         {
-            var entries = DbContext.Set<TEntry>();
-            return ConvertEntitiesFromEntries(entries);
+            return DbContext.Set<TEntity>().ToList();
         }
 
-        public virtual IEnumerable<TEntity> FindAll(Func<TEntry, bool> expression)
+        public virtual IEnumerable<TEntity> FindAll(Func<TEntity, bool> expression)
         {
-            var entries = DbContext.Set<TEntry>().Where(expression);
-            return ConvertEntitiesFromEntries(entries);
+            return DbContext.Set<TEntity>().Where(expression).ToList();
         }
 
-        public virtual TEntity First(Func<TEntry, bool> expression)
+        public virtual TEntity First(Func<TEntity, bool> expression)
         {
-            return ConvertEntryToEntity(DbContext.Set<TEntry>().First(expression));
+            return DbContext.Set<TEntity>().First(expression);
         }
-
-        private TEntry ConvertEntityToEntry(TEntity entity)
-        {
-            return ReflectionHelper.ConvertClassInstances<TEntry>(
-                    ReflectionHelper.GetFullTypeName(entity.GetType()),
-                    entity);
-        }
-
-        private TEntity ConvertEntryToEntity(TEntry entry)
-        {
-            return ReflectionHelper.ConvertClassInstances<TEntity>(
-                    ReflectionHelper.GetFullTypeName(entry.GetType()),
-                    entry);
-        }
-
-        private IEnumerable<TEntity> ConvertEntitiesFromEntries(IEnumerable<TEntry> entries)
-        {
-            return entries.Select(ConvertEntryToEntity).ToList();
-        } 
 
         protected DbContext DbContext { get; set; }
     }

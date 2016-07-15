@@ -20,22 +20,23 @@ namespace Photocom.DataLayer
         private IPhotoRepository _photoRepository;
         private IPrivilegeRepository _privilegeRepository;
         private IUserRepository _userRepository;
+        private ISessionRepository _sessionRepository;
 
         public UnitOfWork()
         {
-            PhotocomContext = new PhotocomContext();
-        }
-
-        public void SaveChanges()
-        {
-            PhotocomContext.SaveChanges();
-
             _categoryRepository = null;
             _commentRepository = null;
             _permissionRepository = null;
             _photoRepository = null;
             _privilegeRepository = null;
             _userRepository = null;
+
+            PhotocomContext = new PhotocomContext();
+        }
+
+        public void SaveChanges()
+        {
+            PhotocomContext.SaveChanges();
         }
 
         public ICategoryRepository CategoryRepository
@@ -110,14 +111,21 @@ namespace Photocom.DataLayer
             }
         }
 
+        public ISessionRepository SessionRepository
+        {
+            get
+            {
+                if (_sessionRepository == null)
+                {
+                    _sessionRepository = new SessionRepository(PhotocomContext);
+                }
+                return _sessionRepository;
+            }
+        }
+
         public void Dispose()
         {
             PhotocomContext.Dispose();
-        }
-
-        public void Seed()
-        {
-            
         }
     }
 }

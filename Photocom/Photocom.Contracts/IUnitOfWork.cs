@@ -22,5 +22,7 @@ namespace Photocom.Contracts
         IPrivilegeRepository PrivilegeRepository { get; }
 
         IUserRepository UserRepository { get; }
+
+        ISessionRepository SessionRepository { get; }
     }
 }

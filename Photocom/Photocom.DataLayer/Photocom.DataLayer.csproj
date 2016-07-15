@@ -49,12 +49,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entries\BaseEntry.cs" />
-    <Compile Include="Entries\CategoryEntry.cs" />
-    <Compile Include="Entries\CommentEntry.cs" />
-    <Compile Include="Entries\PermissionEntry.cs" />
-    <Compile Include="Entries\PhotoEntry.cs" />
-    <Compile Include="Entries\UserEntry.cs" />
+    <Compile Include="Migrations\201607151206312_InitialCreate.cs" />
+    <Compile Include="Migrations\201607151206312_InitialCreate.Designer.cs">
+      <DependentUpon>201607151206312_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201607151315159_AddedHostAndUserAgent.cs" />
+    <Compile Include="Migrations\201607151315159_AddedHostAndUserAgent.Designer.cs">
+      <DependentUpon>201607151315159_AddedHostAndUserAgent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="PhotocomContext.cs" />
     <Compile Include="PhotocomDatabaseInitializer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -64,6 +67,7 @@
     <Compile Include="Repositories\PermissionRepository.cs" />
     <Compile Include="Repositories\PhotoRepository.cs" />
     <Compile Include="Repositories\PrivilegeRepository.cs" />
+    <Compile Include="Repositories\SessionRepository.cs" />
     <Compile Include="Repositories\UserRepository.cs" />
     <Compile Include="UnitOfWork.cs" />
   </ItemGroup>
@@ -87,6 +91,17 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Queries\Queries.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201607151206312_InitialCreate.resx">
+      <DependentUpon>201607151206312_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201607151315159_AddedHostAndUserAgent.resx">
+      <DependentUpon>201607151315159_AddedHostAndUserAgent.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

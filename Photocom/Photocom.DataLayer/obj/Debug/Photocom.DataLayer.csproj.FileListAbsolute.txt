@@ -14,3 +14,6 @@ D:\Projects\Web\Photocom\Photocom\Photocom.DataLayer\bin\Debug\EntityFramework.x
 D:\Projects\Web\Photocom\Photocom\Photocom.DataLayer\bin\Debug\EntityFramework.SqlServer.xml
 D:\Projects\Web\Photocom\Photocom\Photocom.DataLayer\obj\Debug\Photocom.DataLayer.dll
 D:\Projects\Web\Photocom\Photocom\Photocom.DataLayer\obj\Debug\Photocom.DataLayer.pdb
+D:\Projects\Web\Photocom\Photocom\Photocom.DataLayer\obj\Debug\Photocom.DataLayer.Migrations.InitialCreate.resources
+D:\Projects\Web\Photocom\Photocom\Photocom.DataLayer\obj\Debug\Photocom.DataLayer.csproj.GenerateResource.Cache
+D:\Projects\Web\Photocom\Photocom\Photocom.DataLayer\obj\Debug\Photocom.DataLayer.Migrations.AddedHostAndUserAgent.resources
