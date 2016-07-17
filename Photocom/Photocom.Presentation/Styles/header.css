@@ -79,18 +79,26 @@ header {
 .toolbar-btn svg:active {
   fill: #7bce77; }
 
+#tollbar-row {
+  float: right;
+  clear: right;
+  margin-top: 15px; }
+
 #lang {
   float: right;
-  margin-right: 15px;
-  margin-top: 5px; }
+  margin-right: 5px;
+  margin-top: 2px; }
 
 #user {
   float: right; }
 
+#user-toolbar-wrapper {
+  float: right;
+  height: 40px; }
+
 #search {
   float: right;
-  clear: right;
-  margin-top: 10px; }
+  margin-right: 20px; }
 
 #search-bar {
   display: none; }

@@ -3,30 +3,34 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Photocom.BusinessLogic.Controllers;
+using Photocom.Contracts;
 using Photocom.DataLayer;
 using Photocom.Models.Entities;
 using Photocom.Models.Enums.Validation;
-using BL = Photocom.BusinessLogic.Controllers;
 
 namespace Photocom.Presentation.Controllers
 {
-    public class AuthController : Controller
+    public class AuthController : BaseController
     {
+        public AuthController()
+        {
+            UnitOfWork = new UnitOfWork();
+        }
+
+        public AuthController(IUnitOfWork unitOfWork)
+        {
+            UnitOfWork = unitOfWork;
+        }
+
+        public IUnitOfWork UnitOfWork { get; set; }
+
         [HttpPost]
         public ActionResult Login(LoginRequestData loginData)
         {
-            BL.AuthController authController = new BL.AuthController(new UnitOfWork());
+            AuthProcessor authProcessor = new AuthProcessor(UnitOfWork);
 
-            Guid sessionId = Guid.Empty;
-            if (Session["id"] != null)
-            {
-                sessionId = (Guid) Session["id"];
-            }
-            else
-            {
-                sessionId = Guid.NewGuid();
-                Session["id"] = sessionId;
-            }
+            Guid sessionId = GetSessionId();
 
             UserLoginInfo loginInfo = new UserLoginInfo();
             loginInfo.Login = loginData.Login;
@@ -35,15 +39,27 @@ namespace Photocom.Presentation.Controllers
             loginInfo.Host = Request.UserHostAddress;
             loginInfo.UserAgent = Request.UserAgent;
 
-            LoginResult loginResult = authController.Login(loginInfo);
+            LoginResult loginResult = authProcessor.Login(loginInfo);
 
-            return Json(new { Message = $"LoginResult: {loginResult.ToString()}" });
+            return Json(new { Result = loginResult.ToString() });
         }
 
-        [HttpPost]
+        [HttpGet]
         public ActionResult Logout()
         {
-            return Content("Login");
+            AuthProcessor authProcessor = new AuthProcessor(UnitOfWork);
+            ActionResult result = new EmptyResult();
+            Guid sessionId = GetSessionId();
+            authProcessor.TryInitCurrentSession(sessionId);
+
+            LogoutResult logoutResult = authProcessor.Logout();
+
+            if (logoutResult == LogoutResult.Successful)
+            {
+                result = RedirectToAction("Index", "Home");
+            }
+
+            return result;
         }
     }
 }

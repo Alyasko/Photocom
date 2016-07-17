@@ -11,28 +11,38 @@ using System.Text;
 
 namespace Photocom.BusinessLogic.Controllers
 {
-    public class UserController
+    public class PhotosProcessor
     {
-        public virtual void AddUser()
+        public virtual void GetLastPhotos()
         {
             throw new System.NotImplementedException();
         }
 
-        public virtual void UpdateUser()
+        public virtual void Find()
         {
             throw new System.NotImplementedException();
         }
 
-        public virtual void DeleteUser()
+        public virtual void Filter()
         {
             throw new System.NotImplementedException();
         }
 
-        public virtual void GetUsers()
+        public virtual void AddPhoto()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public virtual void UpdatePhoto()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public virtual void DeletePhoto()
         {
             throw new System.NotImplementedException();
         }
 
     }
-
 }
+

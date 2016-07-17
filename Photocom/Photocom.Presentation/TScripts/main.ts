@@ -13,6 +13,7 @@ class Main {
 
     run() {
         this.initHandlers();
+        App.auth.loadUserLoginToolbar();
     }
 
     private createInstances() {

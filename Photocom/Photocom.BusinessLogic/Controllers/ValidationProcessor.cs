@@ -9,7 +9,7 @@ using Photocom.Models.Enums.Validation;
 
 namespace Photocom.BusinessLogic.Controllers
 {
-    public class ValidationController
+    public class ValidationProcessor
     {
         public const int LoginMinLength = 3;
         public const int AboutUserMinLength = 30;

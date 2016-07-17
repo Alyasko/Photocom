@@ -11,7 +11,7 @@ using System.Text;
 
 namespace Photocom.BusinessLogic.Controllers
 {
-    public class PrivilegesController
+    public class PrivilegesProcessor
     {
         public virtual void SetPrivileges()
         {

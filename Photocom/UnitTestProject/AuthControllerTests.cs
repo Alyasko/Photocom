@@ -17,7 +17,7 @@ namespace UnitTestProject
         public void TestLoginWithIncorrectPassword()
         {
             IUnitOfWork unitOfWork = new UnitOfWork();
-            AuthController authController = new AuthController(unitOfWork);
+            AuthProcessor authController = new AuthProcessor(unitOfWork);
 
             UserLoginInfo userLoginInfo = new UserLoginInfo()
             {
@@ -35,7 +35,7 @@ namespace UnitTestProject
         public void TestLoginWithCorrectPassword()
         {
             IUnitOfWork unitOfWork = new UnitOfWork();
-            AuthController authController = new AuthController(unitOfWork);
+            AuthProcessor authController = new AuthProcessor(unitOfWork);
 
             UserLoginInfo userLoginInfo = new UserLoginInfo()
             {
@@ -53,9 +53,11 @@ namespace UnitTestProject
         public void TestLogout()
         {
             IUnitOfWork unitOfWork = new UnitOfWork();
-            AuthController authController = new AuthController(unitOfWork);
+            AuthProcessor authController = new AuthProcessor(unitOfWork);
 
-            bool sesionInit = authController.TryInitCurrentSession("xyzabcd");
+            Guid sessionId = Guid.NewGuid();
+
+            bool sesionInit = authController.TryInitCurrentSession(sessionId);
             Session session = authController.GetCurrentSession();
 
             authController.Logout();
@@ -67,7 +69,7 @@ namespace UnitTestProject
         public void TestLoginWithIncorrectLogin()
         {
             IUnitOfWork unitOfWork = new UnitOfWork();
-            AuthController authController = new AuthController(unitOfWork);
+            AuthProcessor authController = new AuthProcessor(unitOfWork);
 
             UserLoginInfo userLoginInfo = new UserLoginInfo()
             {
@@ -85,7 +87,7 @@ namespace UnitTestProject
         public void TestSignUp()
         {
             IUnitOfWork unitOfWork = new UnitOfWork();
-            AuthController authController = new AuthController(unitOfWork);
+            AuthProcessor authController = new AuthProcessor(unitOfWork);
 
             UserSignUpInfo userSignUpInfo = new UserSignUpInfo()
             {

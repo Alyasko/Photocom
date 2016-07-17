@@ -13,32 +13,15 @@ namespace Photocom.Presentation.Controllers
         // GET: Home
         public ActionResult Index()
         {
-            EF();
+            
             return View();
         }
 
-        private void EF()
+        public ActionResult Test()
         {
-            TestContext testContext = new TestContext();
+            object session = Session["hello"];
 
-            testContext.Entities.Add( new TestEntity() { Value = "How"});
-
-            var hello = testContext.Entities.ToList();
-
-            testContext.SaveChanges();
+            return new EmptyResult();
         }
-    }
-
-    public class TestContext : DbContext
-    {
-        public DbSet<TestEntity> Entities { get; set; } 
-    }
-
-    public class TestEntity
-    {
-        [Key]
-        public int Id { get; set; }
-
-        public string Value { get; set; }
     }
 }

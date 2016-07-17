@@ -17,26 +17,26 @@ using Photocom.Models.Enums.Validation;
 
 namespace Photocom.BusinessLogic.Controllers
 {
-    public class AuthController
+    public class AuthProcessor
     {
         private Session _loggedInSession;
-        private ValidationController _validationController;
+        private ValidationProcessor _validationController;
 
-        public AuthController(IUnitOfWork unitOfWork)
+        public AuthProcessor(IUnitOfWork unitOfWork)
         {
             UnitOfWork = unitOfWork;
 
             _loggedInSession = null;
-            _validationController = new ValidationController();
+            _validationController = new ValidationProcessor();
         }
 
         /// <summary>
-        /// Shoud be called in every
+        /// Shoud be called in every action.
         /// </summary>
         /// <param name="sessionId"></param>
-        public virtual bool TryInitCurrentSession(string sessionId)
+        public virtual bool TryInitCurrentSession(Guid sessionId)
         {
-            _loggedInSession = UnitOfWork.SessionRepository.GetSessionBySessionId(sessionId);
+            _loggedInSession = UnitOfWork.SessionRepository.GetSessionBySessionId(sessionId.ToString());
             return _loggedInSession != null;
         }
 

@@ -9,6 +9,7 @@ var Main = (function () {
     }
     Main.prototype.run = function () {
         this.initHandlers();
+        App.auth.loadUserLoginToolbar();
     };
     Main.prototype.createInstances = function () {
         var search = App.search;
