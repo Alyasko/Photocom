@@ -1,0 +1,16 @@
+﻿
+@model Photocom.Models.Entities.Database.Photo
+    
+<div class="photo">
+    <div class="photo-info hide-info clear-both">
+        <div class="photo-likes">Likes <span class="likes-count-@Model.Id">@Model.Likes.Count</span></div>
+        <div class="photo-author">
+            @Html.ActionLink(Model.Author.GetFullName(), "ViewProfile", "User", new { @login = Model.Author.Login }, new { @class = "author-photo-link" })
+        </div>
+        <div class="photo-comments">Comments @Model.Comments.Count</div>
+    </div>
+
+    <div class="photo-wrapper">
+        <img class="photo-image" data-id="@Model.Id" src="@Url.Content("~/Photos/" + Model.Path)" alt="@Model.Title" />
+    </div>
+</div>

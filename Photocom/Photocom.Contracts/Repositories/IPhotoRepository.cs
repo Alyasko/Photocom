@@ -6,13 +6,15 @@ namespace Photocom.Contracts.Repositories
 {
     public interface IPhotoRepository : IRepository<Photo>
     {
+        Photo GetPhotoById(int id);
+
         IEnumerable<Photo> GetLastPhotos(int skip, int count);
 
         IEnumerable<Photo> GetLastPhotos(Category category, int skip, int count);
 
         IEnumerable<Photo> GetPhotosByUser(User user);
 
-        IEnumerable<Photo> GetPhotosByHashTag(string hashTag);
+        IEnumerable<Photo> GetPhotosByHashTag(HashTag hashTag);
 
         IEnumerable<Photo> GetPhotosByDescription(string description);
 

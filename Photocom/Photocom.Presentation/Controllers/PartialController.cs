@@ -6,23 +6,13 @@ using System.Web.Mvc;
 using Photocom.BusinessLogic.Controllers;
 using Photocom.Contracts;
 using Photocom.DataLayer;
+using Photocom.Models.Entities.Database;
 using Photocom.Presentation.ViewModels;
 
 namespace Photocom.Presentation.Controllers
 {
     public class PartialController : BaseController
     {
-        public IUnitOfWork UnitOfWork { get; set; }
-
-        public PartialController()
-        {
-            UnitOfWork = new UnitOfWork();
-        }
-
-        public PartialController(IUnitOfWork unitOfWork)
-        {
-            
-        }
 
         public ActionResult Login()
         {
@@ -34,8 +24,23 @@ namespace Photocom.Presentation.Controllers
             return PartialView("SignupForm");
         }
 
+        public ActionResult LoadPhoto(int id)
+        {
+            ActionResult result = HttpNotFound("There is no photo with specified id.");
+            PhotoForViewViewModel viewModel = new PhotoForViewViewModel();
+            Photo photo = UnitOfWork.PhotoRepository.GetPhotoById(id);
+
+            if (photo != null)
+            {
+                viewModel.Photo = photo;
+                result = PartialView("PhotoForView", viewModel);
+            }
+
+            return result;
+        }
+
         [HttpGet]
-        public ActionResult GetLoggedInUser()
+        public ActionResult GetUserToolbar()
         {
             AuthProcessor authProcessor = new AuthProcessor(UnitOfWork);
             LoggedInUserViewModel viewModel = new LoggedInUserViewModel();
@@ -45,8 +50,11 @@ namespace Photocom.Presentation.Controllers
 
             if (isLoggedIn)
             {
+                User user = authProcessor.GetCurrentUser();
+
                 viewModel.IsLoggedIn = isLoggedIn;
-                viewModel.UserName = authProcessor.GetCurrentUser().FirstName;
+                viewModel.UserName = user.FirstName;
+                viewModel.Login = user.Login;
                 viewModel.PhotoPath = "";
             }
 

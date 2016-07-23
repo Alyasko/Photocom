@@ -9,6 +9,7 @@ namespace Photocom.Presentation.ViewModels
     {
         public string UserName { get; set; }
         public string PhotoPath { get; set; }
+        public string Login { get; set; }
         public bool IsLoggedIn { get; set; }
     }
 }

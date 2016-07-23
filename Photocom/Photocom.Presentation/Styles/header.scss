@@ -3,16 +3,23 @@
 
 header {
     background-color: $header-bg-color;
-    position: relative;
+    position: absolute;
 
     box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 20px;
 
+    top: 0px;
+
+    width: 100%;
     overflow: hidden;
     height: 136px;
-    transition: height $login-header-transition-delay ease-in-out;
+    transition: height $login-header-transition-delay ease;
     //height: 75px;
 
     z-index: 10;
+}
+
+#header-underlay {
+    height: 140px;
 }
 
 
@@ -153,6 +160,28 @@ header {
 
     height: 40px;
 }   
+
+#user-toolbar-wrapper table {
+    border-spacing: 0px;
+}
+    
+#user-toolbar-wrapper table td {
+    padding: 0px;
+}
+
+#user-photo img {
+    max-height: 40px;
+    max-width: 40px;
+    margin-right: 20px;
+}
+
+#user-name {
+    text-align: right;
+}
+
+#logout-wrapper {
+    text-align: right;
+}
 
 #search {
     float: right;

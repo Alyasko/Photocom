@@ -5,16 +5,20 @@ using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Photocom.Presentation.ViewModels;
 
 namespace Photocom.Presentation.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : BaseController
     {
         // GET: Home
         public ActionResult Index()
         {
-            
-            return View();
+
+            HomeViewModel viewModel = new HomeViewModel();
+            viewModel.Photos = UnitOfWork.PhotoRepository.GetLastPhotos(0, 10);
+
+            return View(viewModel);
         }
 
         public ActionResult Test()

@@ -1,16 +1,26 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using Photocom.Models.Entities.Database;
 
 namespace Photocom.DataLayer
 {
-    public class PhotocomDatabaseInitializer : DropCreateDatabaseIfModelChanges<PhotocomContext>
+    public class PhotocomDatabaseInitializer : CreateDatabaseIfNotExists<PhotocomContext>
     {
         protected override void Seed(PhotocomContext context)
         {
+            context.Users.Add(new User()
+            {
+                FirstName = "Alexander",
+                LastName = "Yasko",
+                AboutUser = "I love Ilona",
+                Email = "a.yasko@example.com",
+                Login = "alyasko",
+                Password = "123",
+                SignUpDate = DateTime.Now
+            });
 
-
-            base.Seed(context);
+            context.SaveChanges();
         }
 
         //public override void InitializeDatabase(PhotocomContext context)

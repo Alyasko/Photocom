@@ -8,7 +8,7 @@ namespace Photocom.DataLayer
     {
         public PhotocomContext()
         {
-            //Database.SetInitializer(new PhotocomDatabaseInitializer());
+            Database.SetInitializer<PhotocomContext>(new PhotocomDatabaseInitializer());
         }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -18,7 +18,9 @@ namespace Photocom.DataLayer
             modelBuilder.Entity<Permission>().HasKey(x => x.Id);
             modelBuilder.Entity<Photo>().HasKey(x => x.Id);
             modelBuilder.Entity<Privilege>().HasKey(x => x.Id);
+            modelBuilder.Entity<HashTag>().HasKey(x => x.Id);
             modelBuilder.Entity<User>().HasKey(x => x.Id);
+            modelBuilder.Entity<Like>().HasKey(x => x.Id);
         }
 
         public DbSet<User> Users { get; set; }
@@ -30,6 +32,8 @@ namespace Photocom.DataLayer
         public DbSet<Comment> Comments { get; set; }
 
         public DbSet<Session> Sessions { get; set; } 
+
+        public DbSet<Like> Likes { get; set; } 
 
         //public DbSet<PermissionEntry> Permissions { get; set; }
 

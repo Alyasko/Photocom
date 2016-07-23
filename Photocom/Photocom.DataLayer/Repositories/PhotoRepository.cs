@@ -17,6 +17,11 @@ namespace Photocom.DataLayer.Repositories
         {
         }
 
+        public Photo GetPhotoById(int id)
+        {
+            return DbContext.Set<Photo>().FirstOrDefault(x => x.Id == id);
+        }
+
         public IEnumerable<Photo> GetLastPhotos(int skip, int count)
         {
             return DbContext.Set<Photo>().OrderByDescending((x) => x.PublicationDate).Skip(skip).Take(count).ToArray();
@@ -30,10 +35,11 @@ namespace Photocom.DataLayer.Repositories
 
         public IEnumerable<Photo> GetPhotosByUser(User user)
         {
-            return DbContext.Set<Photo>().Where(x => x.Author == user).ToArray();
+            //int[] photoIds = DbContext.Set<Photo>().Where(x => x.Author.Equals(user)).Select(x => x.Id).ToArray();
+            return DbContext.Set<Photo>().Where(x => x.Author.Login.Equals(user.Login)).ToList();
         }
 
-        public IEnumerable<Photo> GetPhotosByHashTag(string hashTag)
+        public IEnumerable<Photo> GetPhotosByHashTag(HashTag hashTag)
         {
             return DbContext.Set<Photo>().Where(x => x.HashTags.Contains(hashTag)).ToArray();
         }

@@ -18,9 +18,9 @@ namespace UnitTestProject
             Photo photoEntry = new Photo()
             {
                 Description = "Hello",
-                Likes = new List<User>(),
+                Likes = new List<Like>(),
                 Comments = new List<Comment>(),
-                HashTags = new List<string>(),
+                HashTags = new List<HashTag>(),
                 PublicationDate = time,
             };
             Photo photo = null;

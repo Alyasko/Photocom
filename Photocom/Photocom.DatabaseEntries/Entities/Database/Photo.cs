@@ -15,26 +15,23 @@ namespace Photocom.Models.Entities.Database
 {
     public class Photo : BaseEntity
     {
-        public virtual void Like()
-        {
-            throw new System.NotImplementedException();
-        }
-
         public virtual IList<Comment> Comments { get; set; }
 
-        public virtual IList<string> HashTags { get; set; }
+        public virtual IList<HashTag> HashTags { get; set; }
 
         public virtual string Description { get; set; }
 
-        public virtual IList<User> Likes { get; set; }
+        public virtual IList<Like> Likes { get; set; }
 
         public virtual Category Category { get; set; }
 
         public virtual User Author { get; set; }
 
-
         public DateTime PublicationDate { get; set; }
 
+        public virtual string Path { get; set; }
+
+        public virtual string Title { get; set; }
     }
 }
 

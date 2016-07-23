@@ -1,0 +1,20 @@
+﻿@model Photocom.Presentation.ViewModels.PhotoForViewViewModel
+
+
+<div id="photo-wrapper">
+    <img src="/Photos/@Model.Photo.Path" alt="@Model.Photo.Title"/>
+</div>
+<div id="info">
+    <div id="title">
+        @Model.Photo.Title<br/>
+        @Model.Photo.Description
+    </div>
+    <div id="author-link">
+        @Html.ActionLink($"{Model.Photo.Author.GetFullName()} @{Model.Photo.Author.Login}", "ViewProfile", "User", new { @login = Model.Photo.Author.Login }, new { @class = "dark-link" })
+    </div>
+    <br/>
+    <div id="liked">
+        Liked: <span class="likes-count-@Model.Photo.Id">@Model.Photo.Likes.Count</span>
+    </div>
+    <button id="btn-like" onclick="App.photo.like(@Model.Photo.Id);">I like it!</button>
+</div>

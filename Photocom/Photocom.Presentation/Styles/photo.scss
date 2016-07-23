@@ -1,0 +1,121 @@
+﻿@import 'definitions.scss';
+
+//------------------- Main ------------------//
+
+#photo-container {
+    margin: 20px;
+    text-align: center;
+    min-height: 80vh;
+}
+
+//------------------- Photo -----------------//
+
+.photo {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    width: $photo-width;
+    height: $photo-height;
+    margin: 10px;
+    background-color: $green-color;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 0px;
+    transition: box-shadow 0.2s ease-in-out;
+    overflow: hidden;
+}
+
+.photo:hover {
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 15px 20px;
+}
+
+.photo-info {
+    position: absolute;
+    width: 100%;
+
+    background-color: rgba(0, 0, 0, 0.50);
+}
+
+.photo-likes, .photo-comments, .photo-author {
+    color: white;
+    margin: 5px;
+}
+
+.photo-likes {
+    margin-bottom: 0px;
+    float: left;
+}
+
+.photo-comments {
+    float: left;
+    clear: left;
+    margin-top: 0px;
+}
+
+.photo-author {
+    float: right;
+}
+
+.author-photo-link {
+    color: white;
+}
+
+.author-photo-link:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.photo-wrapper {
+}
+
+.photo-image {
+    max-height: $photo-height;
+}
+
+.show-info {
+    display: block;
+    opacity: 1;
+}
+
+.hide-info {
+    display: none;
+}
+
+// ------------------------ Opened photo --------------------- //
+
+#opened-photo-wrapper {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 600px;
+    z-index: 12;
+    top: 200px;
+    margin-bottom: 100px;
+    padding-bottom: 30px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 20px;
+
+    #title {
+        float: left;
+    }
+
+    #info {
+        margin: 5px 5px 5px 8px;
+
+        #author-link {
+            float: right;
+        }
+
+        #liked {
+            float: right;
+            clear: right;
+        }
+
+        #btn-like {
+            margin-top: 5px;
+            float: right;
+            clear: right;
+        }
+    }
+}
+
+#photo-wrapper img {
+    max-width: 1000px;
+}

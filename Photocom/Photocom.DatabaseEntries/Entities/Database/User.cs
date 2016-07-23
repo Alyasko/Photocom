@@ -30,6 +30,18 @@ namespace Photocom.Models.Entities.Database
 
         public virtual DateTime SignUpDate { get; set; }
 
+        public override bool Equals(object obj)
+        {
+            User other = obj as User;
+
+            return other != null && other.Login.Equals(this.Login);
+        }
+
+        public string GetFullName()
+        {
+            return $"{FirstName} {LastName}";
+        }
+
     }
 }
 

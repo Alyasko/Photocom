@@ -24,5 +24,6 @@ namespace Photocom.Contracts
         IUserRepository UserRepository { get; }
 
         ISessionRepository SessionRepository { get; }
+        ILikeRepository LikeRepository { get; }
     }
 }

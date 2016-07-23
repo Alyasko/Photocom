@@ -21,6 +21,7 @@ namespace Photocom.DataLayer
         private IPrivilegeRepository _privilegeRepository;
         private IUserRepository _userRepository;
         private ISessionRepository _sessionRepository;
+        private ILikeRepository _likeRepository;
 
         public UnitOfWork()
         {
@@ -120,6 +121,18 @@ namespace Photocom.DataLayer
                     _sessionRepository = new SessionRepository(PhotocomContext);
                 }
                 return _sessionRepository;
+            }
+        }
+
+        public ILikeRepository LikeRepository
+        {
+            get
+            {
+                if (_likeRepository == null)
+                {
+                    _likeRepository = new LikeRepository(PhotocomContext);
+                }
+                return _likeRepository;
             }
         }
 

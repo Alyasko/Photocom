@@ -12,11 +12,9 @@ var AuthViewType;
 var AuthView = (function () {
     function AuthView() {
         this.loadingState = AuthLoadedView.NotLoaded;
-        this.updateAuthPosition();
+        this.isShown = false;
+        Helpers.centerPosition("#login-popup");
         var self = this;
-        $(window).resize(function () {
-            self.updateAuthPosition();
-        });
     }
     AuthView.prototype.switchAuth = function () {
         if (this.loadingState === AuthLoadedView.Login) {
@@ -29,6 +27,7 @@ var AuthView = (function () {
         }
     };
     AuthView.prototype.toggleAuthView = function () {
+        this.isShown = !this.isShown;
         $("header").toggleClass("header-collapsed");
         $("#overlapping-shadow").fadeToggle();
         $("#login-popup").fadeToggle();
@@ -55,6 +54,7 @@ var AuthView = (function () {
             }
             else if (viewType === AuthViewType.Signup) {
                 self.loadingState = AuthLoadedView.Signup;
+                self.initSigninFormHandlers();
             }
         }, function fail(data, status) {
             alert("Error " + status);
@@ -70,14 +70,15 @@ var AuthView = (function () {
             e.preventDefault();
         });
     };
+    AuthView.prototype.initSigninFormHandlers = function () {
+        var authView = App.authView;
+        $("#login-btn").click(function (e) {
+            App.auth.signup();
+            e.preventDefault();
+        });
+    };
     AuthView.prototype.displayAuth = function (content) {
         $("#form-wrapper").html(content);
-    };
-    AuthView.prototype.updateAuthPosition = function () {
-        var loginPopup = $("#login-popup");
-        var loginWidth = loginPopup.width();
-        var windowWidth = $(window).width();
-        loginPopup.css("left", (windowWidth / 2) - (loginWidth / 2) + "px");
     };
     return AuthView;
 }());

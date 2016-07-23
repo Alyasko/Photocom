@@ -3,6 +3,7 @@ var App = (function () {
         App._authView = null;
         App._search = null;
         App._auth = null;
+        App._photo = null;
     }
     Object.defineProperty(App, "authView", {
         get: function () {
@@ -30,6 +31,16 @@ var App = (function () {
                 App._search = new Search();
             }
             return App._search;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(App, "photo", {
+        get: function () {
+            if (App._photo == null) {
+                App._photo = new Photo();
+            }
+            return App._photo;
         },
         enumerable: true,
         configurable: true

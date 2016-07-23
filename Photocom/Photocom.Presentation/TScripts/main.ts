@@ -22,9 +22,20 @@ class Main {
 
     private initHandlers() {
         var authView = App.authView;
+        var photo = App.photo;
+
+        $(window).resize(function () {
+            Helpers.centerPosition("#login-popup");
+            Helpers.centerPosition("#opened-photo-wrapper");
+        });
 
         $(".photo").hover(function () {
             $(this).children(".photo-info").toggleClass("hide-info");
+        });
+
+        $(".photo").click(function () {
+            var id = $(this).find(".photo-image").attr("data-id");
+            photo.openPhoto(parseInt(id));
         });
 
         $(".toolbar-btn#user").click(function () {
@@ -36,7 +47,11 @@ class Main {
         });
 
         $("#overlapping-shadow").click(function () {
-            authView.toggleAuthView();
+            if (authView.isShown === true) {
+                authView.toggleAuthView();
+            } else {
+                photo.closePhoto();
+            }
         });
     }
 }

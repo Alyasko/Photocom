@@ -59,6 +59,7 @@
     <Compile Include="Repositories\IUserRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\IPrivilegeRepository.cs" />
+    <Compile Include="Repositories\ILikeRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Photocom.DatabaseEntries\Photocom.Models.csproj">

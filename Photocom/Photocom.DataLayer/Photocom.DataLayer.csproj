@@ -57,6 +57,18 @@
     <Compile Include="Migrations\201607151315159_AddedHostAndUserAgent.Designer.cs">
       <DependentUpon>201607151315159_AddedHostAndUserAgent.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201607191951046_PhotosAdding.cs" />
+    <Compile Include="Migrations\201607191951046_PhotosAdding.Designer.cs">
+      <DependentUpon>201607191951046_PhotosAdding.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201607191954389_AddedTitleToPhoto.cs" />
+    <Compile Include="Migrations\201607191954389_AddedTitleToPhoto.Designer.cs">
+      <DependentUpon>201607191954389_AddedTitleToPhoto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201607231008152_AddedLikesModel.cs" />
+    <Compile Include="Migrations\201607231008152_AddedLikesModel.Designer.cs">
+      <DependentUpon>201607231008152_AddedLikesModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="PhotocomContext.cs" />
     <Compile Include="PhotocomDatabaseInitializer.cs" />
@@ -64,6 +76,7 @@
     <Compile Include="Repositories\AbstractRepository.cs" />
     <Compile Include="Repositories\CategoryRepository.cs" />
     <Compile Include="Repositories\CommentRepository.cs" />
+    <Compile Include="Repositories\LikeRepository.cs" />
     <Compile Include="Repositories\PermissionRepository.cs" />
     <Compile Include="Repositories\PhotoRepository.cs" />
     <Compile Include="Repositories\PrivilegeRepository.cs" />
@@ -101,6 +114,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201607151315159_AddedHostAndUserAgent.resx">
       <DependentUpon>201607151315159_AddedHostAndUserAgent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201607191951046_PhotosAdding.resx">
+      <DependentUpon>201607191951046_PhotosAdding.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201607191954389_AddedTitleToPhoto.resx">
+      <DependentUpon>201607191954389_AddedTitleToPhoto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201607231008152_AddedLikesModel.resx">
+      <DependentUpon>201607231008152_AddedLikesModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

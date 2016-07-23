@@ -8,41 +8,41 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Photocom.Contracts;
+using Photocom.Models.Entities.Database;
 
 namespace Photocom.BusinessLogic.Controllers
 {
-    public class PhotosProcessor
+    public class PhotosProcessor : BaseProcessor
     {
-        public virtual void GetLastPhotos()
+
+        public PhotosProcessor(IUnitOfWork unitOfWork) : base(unitOfWork)
         {
-            throw new System.NotImplementedException();
+            
         }
 
-        public virtual void Find()
+        public int Like(Photo likedPhoto, User user)
         {
-            throw new System.NotImplementedException();
-        }
+            var likedUsers = UnitOfWork.LikeRepository.GetLikesByPhotoId(likedPhoto.Id).Select(x => x.User);
 
-        public virtual void Filter()
-        {
-            throw new System.NotImplementedException();
-        }
+            if (!likedUsers.Contains(user))
+            {
+                likedPhoto.Likes.Add(new Like() { Photo = likedPhoto, User = user});
+            }
+            else
+            {
+                bool removed = UnitOfWork.LikeRepository.RemoveLikeByUserAndPhoto(likedPhoto, user);
 
-        public virtual void AddPhoto()
-        {
-            throw new System.NotImplementedException();
-        }
+                if (removed == false)
+                {
+                    throw new InvalidOperationException("Error while removing like. Fix please.");
+                }
+            }
 
-        public virtual void UpdatePhoto()
-        {
-            throw new System.NotImplementedException();
-        }
+            UnitOfWork.SaveChanges();
 
-        public virtual void DeletePhoto()
-        {
-            throw new System.NotImplementedException();
+            return likedPhoto.Likes.Count;
         }
-
     }
 }
 

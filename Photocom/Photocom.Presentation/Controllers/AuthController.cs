@@ -8,22 +8,12 @@ using Photocom.Contracts;
 using Photocom.DataLayer;
 using Photocom.Models.Entities;
 using Photocom.Models.Enums.Validation;
+using Photocom.Presentation.Models;
 
 namespace Photocom.Presentation.Controllers
 {
     public class AuthController : BaseController
     {
-        public AuthController()
-        {
-            UnitOfWork = new UnitOfWork();
-        }
-
-        public AuthController(IUnitOfWork unitOfWork)
-        {
-            UnitOfWork = unitOfWork;
-        }
-
-        public IUnitOfWork UnitOfWork { get; set; }
 
         [HttpPost]
         public ActionResult Login(LoginRequestData loginData)
@@ -60,6 +50,26 @@ namespace Photocom.Presentation.Controllers
             }
 
             return result;
+        }
+
+        [HttpPost]
+        public ActionResult Signup(SignupRequestData signupData)
+        {
+            AuthProcessor authProcessor = new AuthProcessor(UnitOfWork);
+
+            UserSignUpInfo signUpInfo = new UserSignUpInfo();
+            signUpInfo.AboutUser = signupData.AboutUser;
+            signUpInfo.ConfirmationPassword = signupData.ConfirmationPassword;
+            signUpInfo.Email = signupData.Email;
+            signUpInfo.FirstName = signupData.FirstName;
+            signUpInfo.LastName = signupData.LastName;
+            signUpInfo.Login = signupData.Login;
+            signUpInfo.Password = signupData.Password;
+
+            SignUpResult signUpResult = authProcessor.SignUp(signUpInfo);
+
+
+            return Json(new { Result = signUpResult.ToString() });
         }
     }
 }

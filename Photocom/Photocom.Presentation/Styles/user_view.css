@@ -1,0 +1,29 @@
+#actions-wrapper {
+  margin: 20px; }
+  #actions-wrapper #add-photo {
+    width: 200px; }
+
+#add-photo-wrapper {
+  margin: 20px; }
+
+#user-wrapper table {
+  margin: 20px; }
+  #user-wrapper table td {
+    padding: 0px; }
+#user-wrapper #profile-photo-wrapper {
+  margin-right: 20px; }
+  #user-wrapper #profile-photo-wrapper #profile-photo {
+    max-height: 300px;
+    max-width: 200px; }
+#user-wrapper #user-photo {
+  position: relative;
+  display: inline-block;
+  max-width: 200px;
+  max-height: 200px;
+  background-color: red;
+  margin: 10px; }
+  #user-wrapper #user-photo img {
+    max-width: 200px;
+    max-height: 200px; }
+
+/*# sourceMappingURL=user_view.css.map */

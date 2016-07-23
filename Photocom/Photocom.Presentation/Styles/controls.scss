@@ -14,16 +14,21 @@
 }
 
 .green-form input[type=text]:focus,
-.green-form input[type=password]:focus  {
+.green-form input[type=password]:focus, 
+.green-btn:focus  {
     border: 1px solid $green-color;
+    outline: none;
 }
 
-.green-form input[type=submit] {
+.green-form input[type=submit], .green-btn {
     outline: none;
     font-family: "Segoe UI";
 
-    background-color: #d3dad3;
+    background-color: #d9d9d9;
     border: none;
+
+    border: 1px transparent solid ;
+    border-radius: 0px;
 
     font-size: 18px;
     color: $dark-gray-text-color;
@@ -31,12 +36,14 @@
     padding: 5px;
 }
 
-.green-form input[type=submit]:hover {
+.green-form input[type=submit]:hover,
+.green-btn:hover {
     background-color: $green-color;
     color: white;
 }
 
-.green-form input[type=submit]:active {
+.green-form input[type=submit]:active,
+.green-btn:active {
     background-color: $light-green-color;
     color: white;
 }

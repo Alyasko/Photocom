@@ -9,24 +9,30 @@
   padding: 5px; }
 
 .green-form input[type=text]:focus,
-.green-form input[type=password]:focus {
-  border: 1px solid #65c660; }
+.green-form input[type=password]:focus,
+.green-btn:focus {
+  border: 1px solid #65c660;
+  outline: none; }
 
-.green-form input[type=submit] {
+.green-form input[type=submit], .green-btn {
   outline: none;
   font-family: "Segoe UI";
-  background-color: #d3dad3;
+  background-color: #d9d9d9;
   border: none;
+  border: 1px transparent solid;
+  border-radius: 0px;
   font-size: 18px;
   color: #747474;
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
   padding: 5px; }
 
-.green-form input[type=submit]:hover {
+.green-form input[type=submit]:hover,
+.green-btn:hover {
   background-color: #65c660;
   color: white; }
 
-.green-form input[type=submit]:active {
+.green-form input[type=submit]:active,
+.green-btn:active {
   background-color: #7bce77;
   color: white; }
 

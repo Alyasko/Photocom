@@ -7,3 +7,8 @@ D:\Projects\Web\Photocom\Photocom\Photocom.DatabaseEntries\obj\Debug\Photocom.Mo
 D:\Projects\Web\Photocom\Photocom\Photocom.DatabaseEntries\obj\Debug\Photocom.Models.pdb
 D:\Projects\Web\Photocom\Photocom\Photocom.DatabaseEntries\bin\Debug\Photocom.Models.dll
 D:\Projects\Web\Photocom\Photocom\Photocom.DatabaseEntries\bin\Debug\Photocom.Models.pdb
+D:\Projects\GitHub\Photocom\Photocom\Photocom.DatabaseEntries\bin\Debug\Photocom.Models.dll
+D:\Projects\GitHub\Photocom\Photocom\Photocom.DatabaseEntries\bin\Debug\Photocom.Models.pdb
+D:\Projects\GitHub\Photocom\Photocom\Photocom.DatabaseEntries\obj\Debug\Photocom.Models.csprojResolveAssemblyReference.cache
+D:\Projects\GitHub\Photocom\Photocom\Photocom.DatabaseEntries\obj\Debug\Photocom.Models.dll
+D:\Projects\GitHub\Photocom\Photocom\Photocom.DatabaseEntries\obj\Debug\Photocom.Models.pdb

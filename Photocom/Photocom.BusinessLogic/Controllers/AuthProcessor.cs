@@ -17,15 +17,13 @@ using Photocom.Models.Enums.Validation;
 
 namespace Photocom.BusinessLogic.Controllers
 {
-    public class AuthProcessor
+    public class AuthProcessor : BaseProcessor
     {
         private Session _loggedInSession;
         private ValidationProcessor _validationController;
 
-        public AuthProcessor(IUnitOfWork unitOfWork)
+        public AuthProcessor(IUnitOfWork unitOfWork) : base(unitOfWork)
         {
-            UnitOfWork = unitOfWork;
-
             _loggedInSession = null;
             _validationController = new ValidationProcessor();
         }
@@ -160,10 +158,8 @@ namespace Photocom.BusinessLogic.Controllers
 
         public virtual User GetCurrentUser()
         {
-            return _loggedInSession.User;
+            return _loggedInSession?.User;
         }
-
-        public IUnitOfWork UnitOfWork { get; set; }
     }
 }
 

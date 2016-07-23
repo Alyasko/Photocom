@@ -16,6 +16,10 @@ a {
     color: $dark-gray-text-color;
 }
 
+a:hover {
+    text-decoration: none;
+}
+
 .no-select {
     -moz-user-select: none;
     -ms-user-select: none;
